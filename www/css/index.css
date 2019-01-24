@@ -1,0 +1,212 @@
+html {
+  height:100%;
+  overflow-y: scroll;
+}
+body {
+  color: #4A443D;
+  display: flex;
+  flex-direction: column;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  height:100%;
+  justify-content: space-between;
+}
+#nav-top {
+  background: #d9d6d4;
+  height: 2rem;
+}
+#nav-top a {
+  border-right: 1px solid #aaa;
+  color: #82786f;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: .5px;
+  line-height: 2rem;
+  padding-left: 6px;
+  padding-right: 8px;
+  text-decoration: none;
+}
+.navbar-inner .container a:first-child {
+  padding-left: 0 !important;
+}
+.navbar-brand {
+  color: #ffffff !important;
+  font-size: 1.5rem;
+  font-weight: 300 !important;
+  text-shadow: none !important;
+}
+.text-white {
+  color: white;
+  text-decoration: none;
+}
+.link-orange:hover {
+  color: #f2b566;
+}
+.nav {
+  display: inline;
+}
+.navbar {
+  background-color: #f2b566;
+  background-image: none;
+  margin:0;
+  position: relative;
+}
+.navbar li {
+  padding-left: 8px;
+  padding-right:8px;
+}
+#navbarDropdown a {
+  color: #82786f;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: .4px;
+  line-height: 2rem;
+}
+.dropdown-menu {
+  text-align: center;
+}
+.dropdown {
+  border-left: 1px solid #eee;
+}
+@media screen and (max-width: 700px) {
+  .hidden-tiny {
+    display: none;
+  }
+}
+.card-group {
+  margin-bottom: 20px!important;
+}
+h1 {
+  font-size: 2.2rem;
+  font-weight: 200;
+  margin-bottom: .4rem;
+  margin-top: .4rem;
+}
+h2 {
+  font-size: 2.3rem;
+  font-weight: 500;
+  margin-bottom: .3rem;
+  margin-top: .3rem;
+}
+h3 {
+  font-weight: 200;
+  margin-bottom: .3rem;
+  margin-top: .3rem;
+}
+p {
+  font-size: 0.8rem;
+}
+p a {
+  color: #fa860a;
+  color:hsla(31, 96%, 51%, 0.7);
+}
+.title {
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+.map-title {
+  padding-top: 1rem;
+  text-align: center;
+}
+.center {
+  text-align: center;
+}
+.content{
+  overflow-y: auto;
+  padding-top: 2rem;
+  position: relative;
+}
+.width-80 {
+  margin: 0 auto;
+  max-width: 1200px;
+  width:80%;
+}
+.width-60 {
+  margin: 0 auto;
+  max-width: 700px;
+  padding-bottom: 100px;
+  padding-top: 20px;
+  width: 60%;
+}
+.width-20 {
+  margin: 0 auto;
+  width: 20%;
+}
+.btn {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: .5px;
+}
+.btn-orange {
+  background-color: #e98300;
+  border-color: #e98300;
+}
+.btn-secondary {
+  
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.btn-secondary:hover {
+  background-color: #f2b566;
+  border-color: #f2b566;
+}
+.btn-light:hover {
+  background-color: white;
+  border-color: #d9d6d4;
+}
+.overtop {
+  z-index: 1000;
+}
+footer { 
+  height: 4rem;
+  line-height: 4rem;
+ }
+ footer a, a:hover {
+  color: inherit;
+  text-decoration: none;
+ }
+ .fme {
+  height:2.2rem;
+  width:2.2rem;
+ }
+.bg-img {
+  background-color: #cccccc;
+  background-image: url("https://cdn.safe.com/wp-content/uploads/2016/07/27144300/footer_lodyas.png");
+  background-position:50% 50%;
+  background-size:cover;
+  height:100%;
+  width:100%;
+}
+.map-img {
+  width:20%;
+  margin-left: 70%;
+  vertical-align: top;
+}
+.explorer-text {
+  padding-top: 15px;
+}
+.ui-control {
+  margin: 0 auto;
+}
+.ui-control tr {
+  font-size: 0.6rem;
+  margin-bottom:5px;
+  text-transform:uppercase;
+}
+.card {
+  margin-bottom: 3rem;
+}
+.card-img-top{
+  padding: 30px;
+}
+.table-hover tbody td:hover {
+  background-color: #f2b566;
+}
+#mapDiv { 
+  height:500px;
+  margin-bottom: 3rem;
+  margin-top: 1.5rem;
+}
+#table {
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,2155 @@
+#! <?xml version="1.0" encoding="UTF-8" ?>
+#! <WORKSPACE
+#    Command-line to run this workspace:
+#        "/Library/FME/2019.0 18151/fme" "/Users/nhildebrand/Documents/Web Demos/uscensus-explorer/fme/uscensus.fmw"
+#              --GEOM "[{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-115.18890380859376,39.37889504706486]}}] "
+#    
+#!   ATTR_TYPE_ENCODING="SDF"
+#!   BEGIN_PYTHON=""
+#!   BEGIN_TCL=""
+#!   CATEGORY=""
+#!   DESCRIPTION=""
+#!   DESTINATION="NONE"
+#!   DESTINATION_ROUTING_FILE=""
+#!   DOC_EXTENTS="2875 140.028"
+#!   DOC_TOP_LEFT="-270.003 -785.007"
+#!   END_PYTHON=""
+#!   END_TCL=""
+#!   EXPLICIT_BOOKMARK_ORDER="false"
+#!   FME_BUILD_NUM="19151"
+#!   FME_DOCUMENT_GUID="335ce0d1-05ed-4f6d-884b-53fb4d908454"
+#!   FME_DOCUMENT_PRIORGUID="e4167b13-66da-46e0-83f1-2650468dc706,0617fe47-1a50-4edb-8b8a-1270cbad4601,94be3a35-3a0c-4059-8229-a6da93caa1d0,ce68712f-f427-4740-9339-802264bd8a3f,8a54b0fe-3dd4-4f1a-a1c9-246582467a2b,3909e3ad-56de-4528-b12f-26471c2f1d9e,cea98028-a09a-47ee-b18f-155a7628db76,ceee77be-05be-4ec8-8496-9b0c2e75eef5,896a0919-ca65-41b5-becb-04df12e0e18d,838f5e4d-bcaf-4e09-a2de-ac8163d5076f"
+#!   FME_GEOMETRY_HANDLING="Enhanced"
+#!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
+#!   FME_REPROJECTION_ENGINE="FME"
+#!   FME_SERVER_SERVICES=""
+#!   FME_STROKE_MAX_DEVIATION="0"
+#!   HISTORY=""
+#!   IGNORE_READER_FAILURE="No"
+#!   LAST_SAVE_BUILD="FME(R) 2019.0.0.0 (20181109 - Build 19151 - macosx)"
+#!   LAST_SAVE_DATE="2019-01-07T10:38:46"
+#!   LOG_FILE=""
+#!   LOG_MAX_RECORDED_FEATURES="200"
+#!   MARKDOWN_DESCRIPTION=""
+#!   MARKDOWN_USAGE=""
+#!   MAX_LOG_FEATURES="200"
+#!   MULTI_WRITER_DATASET_ORDER="BY_ID"
+#!   PASSWORD=""
+#!   PYTHON_COMPATIBILITY="2or3"
+#!   REDIRECT_TERMINATORS="NONE"
+#!   SAVE_ON_PROMPT_AND_RUN="Yes"
+#!   SHOW_ANNOTATIONS="true"
+#!   SHOW_INFO_NODES="true"
+#!   SOURCE="NONE"
+#!   SOURCE_ROUTING_FILE=""
+#!   TERMINATE_REJECTED="NO"
+#!   TITLE=""
+#!   USAGE=""
+#!   USE_MARKDOWN=""
+#!   VIEW_POSITION="-1884.02 720.007"
+#!   WARN_INVALID_XFORM_PARAM="Yes"
+#!   WORKSPACE_VERSION="1"
+#!   ZOOM_SCALE="100"
+#! >
+#! <DATASETS>
+#! <DATASET
+#!   IS_SOURCE="false"
+#!   ROLE="WRITER"
+#!   FORMAT="GEOJSON"
+#!   DATASET="$(FME_SHAREDRESOURCE_DATA)/blockgroups.json"
+#!   KEYWORD="GEOJSON_1"
+#!   MULTI_GEOM_ALLOWED="true"
+#!   ATTR_MAX_LENGTH="600"
+#!   ATTR_CASE="ANY"
+#!   ALLOWED_FEAT_TYPES=""
+#!   WRITE_DEFS="true"
+#!   DEFLINE_TEMPLATE=""
+#!   DEFLINE_ATTRS="true"
+#!   EXPOSABLE_ATTRS="fme_start_angle float fme_secondary_axis float fme_text_string string fme_rotation float fme_sweep_angle float fme_color string fme_primary_axis float fme_fill_color string fme_text_size float fme_type string fme_dataset string fme_geometry string fme_feature_type string fme_basename string"
+#!   DEFLINE_PARMS=""
+#!   ATTR_INDEX_TYPES=""
+#!   ATTR_NAME_INVALID_CHARS=""
+#!   SUPPORTS_FEATURE_TYPE_FANOUT="true"
+#!   ENABLED="true"
+#!   DYNAMIC_FEATURE_TYPES_LIST_ON_MERGE="true"
+#!   DATASET_TYPE="FILE"
+#!   GENERATE_FME_BUILD_NUM="18528"
+#!   COORDSYS=""
+#!   FANOUT_EXPRESSION="&lt;Unused&gt;"
+#!   FANOUT_GROUP="NO"
+#! >
+#! <METAFILE_PARAMETER
+#!   NAME="DATASET_NAME"
+#!   VALUE="json file"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="MIME_TYPE"
+#!   VALUE="application/geo+json ADD_DISPOSITION"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="READER_DATASET_HINT"
+#!   VALUE="Select the GeoJSON file(s) or type the GeoJSON URL"
+#! />
+#! <METAFILE_PARAMETER
+#!   NAME="WRITER_DATASET_HINT"
+#!   VALUE="Specify a name for the GeoJSON file"
+#! />
+#! </DATASET>
+#! </DATASETS>
+#! <DATA_TYPES>
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_buffer"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binarybuffer"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_xml"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varchar(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_varbinary(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="boolean"
+#!   FME_TYPE="fme_boolean"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_char(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_binary(width)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_datetime"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_time"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_date"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="float"
+#!   FME_TYPE="fme_real32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_uint64"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint32"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int16"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint16"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_int8"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="int"
+#!   FME_TYPE="fme_uint8"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="string"
+#!   FME_TYPE="fme_decimal(width,decimal)"
+#!   FORMAT="GEOJSON"
+#! />
+#! <DATA_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json"
+#!   FME_TYPE="fme_json"
+#!   FORMAT="GEOJSON"
+#! />
+#! </DATA_TYPES>
+#! <GEOM_TYPES>
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_point"
+#!   FME_TYPE="fme_point"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_line"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_area"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_text"
+#!   FME_TYPE="fme_text"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_ellipse"
+#!   FME_TYPE="fme_ellipse"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_arc"
+#!   FME_TYPE="fme_arc"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_rectangle"
+#!   FME_TYPE="fme_rectangle"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_rounded_rectangle"
+#!   FME_TYPE="fme_rounded_rectangle"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_raster"
+#!   FME_TYPE="fme_raster"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_no_geom"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_collection"
+#!   FME_TYPE="fme_collection"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_surface"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_line"
+#!   FME_TYPE="fme_solid"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_polygon"
+#!   FME_TYPE="fme_point_cloud"
+#!   FORMAT="GEOJSON"
+#! />
+#! <GEOM_TYPE
+#!   IS_SOURCE="false"
+#!   FORMAT_TYPE="json_no_geom"
+#!   FME_TYPE="fme_feature_table"
+#!   FORMAT="GEOJSON"
+#! />
+#! </GEOM_TYPES>
+#! <FEATURE_TYPES>
+#! <FEATURE_TYPE
+#!   IS_SOURCE="false"
+#!   NODE_NAME="blockgroups"
+#!   FEATURE_TYPE_NAME=""
+#!   FEATURE_TYPE_NAME_QUALIFIER=""
+#!   IS_EDITABLE="true"
+#!   IDENTIFIER="14"
+#!   FEAT_GEOMTYPE="All"
+#!   POSITION="2174.9957099570988 -644.97865302182413"
+#!   BOUNDING_RECT="2174.9957099570988 -644.97865302182413 430 71"
+#!   ORDER="500000000000101"
+#!   COLLAPSED="true"
+#!   KEYWORD="GEOJSON_1"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   SCHEMA_ATTRIBUTE_SOURCE="1"
+#! >
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Total Population" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Females" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Males" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Hispanic" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Hawaiian" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Caucasian" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Native American" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Black or African American" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Asian" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Other Ethnicity" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Under 5" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="5 to 17" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="18 to 24" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="25 to 44" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="45 to 64" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="65 or Over" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Total Housing Units" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Owner Occupied" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Renter Occupied" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Average Household Occupancy" ATTR_TYPE="float" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Total Vacant Units" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Median Home Value" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Median Household Income" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Population Below Poverty Level" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Population Without Health Insurance" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Population Without High School Diploma" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Population With College Credential" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="State" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Census Tract" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Census Block Group" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="GEOID" ATTR_TYPE="int" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="Area (sq. mi.)" ATTR_TYPE="float" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#! </FEATURE_TYPE>
+#! </FEATURE_TYPES>
+#! <FMESERVER>
+#! <SERVICES>
+#! <SERVICE
+#!   NAME="fmedatadownload"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE="FME_DISCLOSURE_OPEN"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE="GEOJSON_1"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="OUTPUT_WRITER"
+#!   VALUE="GEOJSON_1"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! <SERVICE
+#!   NAME="fmedatastreaming"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE="FME_DISCLOSURE_OPEN"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE="GEOJSON_1"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="OUTPUT_WRITER"
+#!   VALUE="GEOJSON_1"
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! <SERVICE
+#!   NAME="fmejobsubmitter"
+#! >
+#! <PROPERTIES>
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="ADVANCED"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="FAILURE_TOPICS"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="HTTP_DATASET"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="NOTIFICATION_WRITER"
+#!   VALUE=""
+#! />
+#! <PROPERTY
+#!   CATEGORY="FMEUSERPROPDATA"
+#!   NAME="SUCCESS_TOPICS"
+#!   VALUE=""
+#! />
+#! </PROPERTIES>
+#! </SERVICE>
+#! </SERVICES>
+#! <REPOSITORY
+#!   NAME="uscensus-explorer"
+#! />
+#! <ITEM
+#!   NAME="uscensus.fmw"
+#! />
+#! <MODIFICATIONS>
+#! <MODIFICATION
+#!   UID=":DatasetMgr_GEOJSON_1:DestDataset_GEOJSON_1"
+#!   VALUE="$(FME_SHAREDRESOURCE_DATA)/blockgroups.json"
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SERVER_DEST_DIR"
+#!   VALUE="$(FME_SHAREDRESOURCE_DATA)/census_data"
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_DATA"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_SHAREDRESOURCE_TEMP"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":GlobalParameterMgr:FME_TOPIC_MESSAGE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:DESTINATION_ROUTING_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:LOG_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBDoc:SOURCE_ROUTING_FILE"
+#!   VALUE=""
+#! />
+#! <MODIFICATION
+#!   UID=":WBParameterNode_8:FILEPATH_OR_URL"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID="USCensusCaller:WBParameterNode_10:GEOID_HEIGHT_GRID"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID="USCensusCaller:WBParameterNode_29:DATASET"
+#!   VALUE="&lt;at&gt;Value&lt;openparen&gt;url&lt;closeparen&gt;"
+#! />
+#! <MODIFICATION
+#!   UID="USCensusCaller:WBParameterNode_5:OUTPUT_DIRNAME"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID="USCensusCaller:WBParameterNode_5:OUTPUT_FILENAME"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! <MODIFICATION
+#!   UID="USCensusCaller:WBParameterNode_5:UPLOAD_FILE"
+#!   VALUE="&lt;Unused&gt;"
+#! />
+#! </MODIFICATIONS>
+#! <READER_DATASETS>
+#! <DATASET 
+#!   NAME="FeatureReader"
+#!   OVERRIDE="--FeatureReaderDataset_FeatureReader"
+#!   DATASET="@Value(url)"
+#! />
+#! </READER_DATASETS>
+#! <WRITER_DATASETS>
+#! <DATASET 
+#!   NAME="GEOJSON_1"
+#!   OVERRIDE="-GEOJSON_1_DATASET"
+#!   DATASET="GEOJSON_1/blockgroups.json"
+#! />
+#! </WRITER_DATASETS>
+#! </FMESERVER>
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI TEXT_OR_ATTR GEOM GEOM:"
+#!   DEFAULT_VALUE="[{&quot;type&quot;:&quot;Feature&quot;,&quot;properties&quot;:{},&quot;geometry&quot;:{&quot;type&quot;:&quot;Point&quot;,&quot;coordinates&quot;:[-115.18890380859376,39.37889504706486]}}] "
+#!   IS_STAND_ALONE="true"
+#! />
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI IGNORE OPTIONAL DIRNAME_SRC FME_SERVER_DEST_DIR FME Server Destination Directory:"
+#!   DEFAULT_VALUE="$(FME_SHAREDRESOURCE_DATA)/census_data"
+#!   IS_STAND_ALONE="FME_SERVER"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="2"
+#!   TYPE="SubDocumentTransformer"
+#!   VERSION="1"
+#!   POSITION="1431.0143101431015 -714.00714007140061"
+#!   BOUNDING_RECT="1431.0143101431015 -714.00714007140061 522.00522005220046 71"
+#!   ORDER="500000000000001"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="Areas"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Total Population" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Females" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Males" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Hispanic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Hawaiian" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Caucasian" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Native American" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Black or African American" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Asian" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other Ethnicity" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Under 5" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="5 to 17" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="18 to 24" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="25 to 44" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="45 to 64" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="65 or Over" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Total Housing Units" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Owner Occupied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Renter Occupied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Average Household Occupancy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Total Vacant Units" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Median Home Value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Median Household Income" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Population Below Poverty Level" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Population Without Health Insurance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Population Without High School Diploma" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Population With College Credential" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="State" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Census Tract" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Census Block Group" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Area (sq. mi.)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="APIkey" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SUB_DOC_NAME" PARM_VALUE="USCensusCaller"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="SimpleUSCensusCaller"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="3"
+#!   TYPE="Creator"
+#!   VERSION="5"
+#!   POSITION="-270.00270002700012 -717.00714007140061"
+#!   BOUNDING_RECT="-270.00270002700012 -717.00714007140061 -1 -1"
+#!   ORDER="500000000000003"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18528"
+#! >
+#!     <OUTPUT_FEAT NAME="CREATED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATEND" PARM_VALUE="no"/>
+#!     <XFORM_PARM PARM_NAME="COORDS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE="LL84"/>
+#!     <XFORM_PARM PARM_NAME="CRE_ATTR" PARM_VALUE="_creation_instance"/>
+#!     <XFORM_PARM PARM_NAME="GEOM" PARM_VALUE="&lt;lt&gt;?xml&lt;space&gt;version=&lt;quote&gt;1.0&lt;quote&gt;&lt;space&gt;encoding=&lt;quote&gt;US_ASCII&lt;quote&gt;&lt;space&gt;standalone=&lt;quote&gt;no&lt;quote&gt;&lt;space&gt;?&lt;gt&gt;&lt;lt&gt;geometry&lt;gt&gt;&lt;lt&gt;null&lt;solidus&gt;&lt;gt&gt;&lt;lt&gt;&lt;solidus&gt;geometry&lt;gt&gt;"/>
+#!     <XFORM_PARM PARM_NAME="GEOMTYPE" PARM_VALUE="Geometry Object"/>
+#!     <XFORM_PARM PARM_NAME="NUM" PARM_VALUE="1"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Creator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="JSONFragmenter"
+#!   VERSION="7"
+#!   POSITION="865.50841508415124 -714.00714007140061"
+#!   BOUNDING_RECT="865.50841508415124 -714.00714007140061 -1 -1"
+#!   ORDER="500000000000028"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18528"
+#! >
+#!     <OUTPUT_FEAT NAME="FRAGMENTS"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_GEOM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_GEOM" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="EXPLODE_FORMAT" PARM_VALUE="GEOJSON"/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_ATTR" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="FILEPATH_OR_URL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FLATTEN_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="INPUT_SETTINGS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="JSON_ATTR" PARM_VALUE="_GEOM"/>
+#!     <XFORM_PARM PARM_NAME="JSON_QUERY" PARM_VALUE="json&lt;openbracket&gt;*&lt;closebracket&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PREF_STRING" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="READ_FROM_FILE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="RECURSIVE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="REJECT_EMPTY_LISTS" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="RESULT_ATTRIBUTE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONFragmenter"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="11"
+#!   TYPE="ParameterFetcher"
+#!   VERSION="4"
+#!   POSITION="291.75255752557541 -717.50879008790071"
+#!   BOUNDING_RECT="291.75255752557541 -717.50879008790071 -1 -1"
+#!   ORDER="500000000000030"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18528"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_creation_instance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_GEOM" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="_GEOM $(GEOM)"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="ParameterFetcher"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="12"
+#!   SOURCE_NODE="3"
+#!   TARGET_NODE="11"
+#!   SOURCE_PORT_DESC="fo 0 CREATED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="9"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="14"
+#!   SOURCE_PORT_DESC="fo 0 Areas"
+#!   TARGET_PORT_DESC="-1"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="10"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="2"
+#!   SOURCE_PORT_DESC="fo 0 FRAGMENTS"
+#!   TARGET_PORT_DESC="fi 0 Points"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="13"
+#!   SOURCE_NODE="11"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! <SUBDOCUMENTS>
+#! <SUBDOCUMENT
+#!   NAME="USCensusCaller"
+#!   CATEGORY="Web"
+#!   DESCRIPTION="&lt;h3&gt;USCensusCaller Transformer&lt;/h3&gt;&#10;&lt;p&gt;Enhance your workflow by connecting to the US Census API and extracting demographic data. &lt;/p&gt;&#10;&lt;h3&gt;Overview&lt;/h3&gt;&#10;&lt;p&gt;The USCensusCaller pulls from the US Census Bureau&apos;s 2016 Planning Database and accesses data collected by either the US Census or the American Community Survey. &lt;/p&gt;&#10;&lt;p&gt;A TIGERWeb call is also built in, allowing the non-spatial Census data to be merged with the appropriate block group polygon representing the data&apos;s spatial extent. This allows for visualization on top of any further analysis on the census data.&lt;/p&gt;"
+#!   DOC_DYNAMIC_INPUT_ATTRS="0"
+#!   DOC_EXTENTS="6373.55 1043.19"
+#!   DOC_TOP_LEFT="-3711.56 331.034"
+#!   FME_DOCUMENT_GUID="6d56d6aa-226c-4e65-8995-e3e765f1f0b6"
+#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_PROCESS_COUNT="NO_PARALLELISM"
+#!   FME_PROCESS_GROUPS_ORDERED="No"
+#!   FME_PROCESS_GROUP_BY=""
+#!   FME_PROCESS_PRESERVE_GROUP_ATTR="No"
+#!   FMX_ATTRIBUTE_PROPOGATION_MODE="ALL"
+#!   HISTORY="2017&lt;space&gt;December&lt;space&gt;11,Nathan&lt;space&gt;Hildebrand,Initial&lt;space&gt;commit.,2019&lt;space&gt;January&lt;space&gt;7,Nathan&lt;space&gt;Hildebrand,Overhaul&lt;solidus&gt;simplification&lt;space&gt;of&lt;space&gt;transformer.&lt;space&gt;Upgraded&lt;space&gt;for&lt;space&gt;FME&lt;space&gt;2019.0."
+#!   IS_VISIBLE="false"
+#!   LAST_SAVE_BUILD="FME(R) 2017.1.1.2 (20171115 - Build 17654 - WIN64)"
+#!   LAST_SAVE_DATE="2017-12-13T14:46:57"
+#!   MARKDOWN_DESCRIPTION="&#10;###USCensusCaller Transformer&#10;&#10;Enhance your workflow by connecting to the US Census API and extracting demographic data. &#10;&#10;###Overview&#10;&#10;The USCensusCaller pulls from the US Census Bureau&apos;s 2016 Planning Database and accesses data collected by either the US Census or the American Community Survey. &#10;&#10;A TIGERWeb call is also built in, allowing the non-spatial Census data to be merged with the appropriate block group polygon representing the data&apos;s spatial extent. This allows for visualization on top of any further analysis on the census data."
+#!   MARKDOWN_USAGE="**Inputs/Outputs**&#10;&#10;- Input:  Geocoded point data in the LL84 coordinate system (lat/long).&#10;&#10;- Output:  Census Block Group areas (that intersect your inputs) with demographic attributes. The input point data in the appropriate US Census coordinate system.&#10;&#10;**Parameters**&#10;&#10;**Data Source:** [The 2016 planning database](https://www.census.gov/data/developers/data-sets/planning-database.2016.html) hosts two datasets: the American Community Survey and the US Census. While these datasets overlap, they contain different variables and are administered to different subsets of the American population, resulting in different values. &#10;&#10;In order to minimize the number of variables called at once, please choose one or the other when using the USCensusCaller. The American Community Survey is suggested for economic data, while the Us Census dataset has more specific data concerning demographics and population.&#10;&#10;**API Key:** While an API key is not needed to access the planning database, it is recommended for large or repetitive calls, as a limit based on IP address does exist. Consider requesting a key [here](https://api.census.gov/data/key_signup.html).&#10;&#10;**External documentation:**&#10;&#10;&#10;-[US Census Bureau Planning Database](https://www.census.gov/data/developers/data-sets/planning-database.2016.html)&#10;&#10;-[List of variables available through the API](https://api.census.gov/data/2016/pdb/tract/variables.html)"
+#!   PYTHON_COMPATIBILITY="2or3"
+#!   SUPPRESS_UPGRADE="false"
+#!   TITLE="USCensusCaller"
+#!   USAGE="&lt;p&gt;&lt;strong&gt;Inputs/Outputs&lt;/strong&gt;&lt;/p&gt;&#10;&lt;ul&gt;&#10;&lt;li&gt;&#10;&lt;p&gt;Input:  Geocoded point data in the LL84 coordinate system (lat/long).&lt;/p&gt;&#10;&lt;/li&gt;&#10;&lt;li&gt;&#10;&lt;p&gt;Output:  Census Block Group areas (that intersect your inputs) with demographic attributes. The input point data in the appropriate US Census coordinate system.&lt;/p&gt;&#10;&lt;/li&gt;&#10;&lt;/ul&gt;&#10;&lt;p&gt;&lt;strong&gt;Parameters&lt;/strong&gt;&lt;/p&gt;&#10;&lt;p&gt;&lt;strong&gt;Data Source:&lt;/strong&gt; &lt;a href=&quot;https://www.census.gov/data/developers/data-sets/planning-database.2016.html&quot;&gt;The 2016 planning database&lt;/a&gt; hosts two datasets: the American Community Survey and the US Census. While these datasets overlap, they contain different variables and are administered to different subsets of the American population, resulting in different values. &lt;/p&gt;&#10;&lt;p&gt;In order to minimize the number of variables called at once, please choose one or the other when using the USCensusCaller. The American Community Survey is suggested for economic data, while the Us Census dataset has more specific data concerning demographics and population.&lt;/p&gt;&#10;&lt;p&gt;&lt;strong&gt;API Key:&lt;/strong&gt; While an API key is not needed to access the planning database, it is recommended for large or repetitive calls, as a limit based on IP address does exist. Consider requesting a key &lt;a href=&quot;https://api.census.gov/data/key_signup.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;&#10;&lt;p&gt;&lt;strong&gt;External documentation:&lt;/strong&gt;&lt;/p&gt;&#10;&lt;p&gt;-&lt;a href=&quot;https://www.census.gov/data/developers/data-sets/planning-database.2016.html&quot;&gt;US Census Bureau Planning Database&lt;/a&gt;&lt;/p&gt;&#10;&lt;p&gt;-&lt;a href=&quot;https://api.census.gov/data/2016/pdb/tract/variables.html&quot;&gt;List of variables available through the API&lt;/a&gt;&lt;/p&gt;"
+#!   USE_MARKDOWN="YES"
+#!   VIEW_POSITION="-4181.12 2008.13"
+#!   XFORM_DEPRECATED="No"
+#!   ZOOM_SCALE="111"
+#! >
+#! <GLOBAL_PARAMETERS>
+#! <GLOBAL_PARAMETER
+#!   GUI_LINE="GUI IGNORE OPTIONAL TEXT_OR_ATTR APIkey API Key:"
+#!   DEFAULT_VALUE=""
+#!   IS_STAND_ALONE="true"
+#! />
+#! </GLOBAL_PARAMETERS>
+#! <COMMENTS>
+#! </COMMENTS>
+#! <CONSTANTS>
+#! </CONSTANTS>
+#! <BOOKMARKS>
+#! <BOOKMARK
+#!   IDENTIFIER="65"
+#!   NAME="TIGERWeb Call (Spatial)"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-2119.1799999999998 1098.27"
+#!   ORDER="500000000000000"
+#!   BOTTOM_RIGHT="-1336.4919999999997 331.04099999999994"
+#!   BOUNDING_RECT="-2119.1799999999998 1098.27 782.68799999999999 767.22900000000004"
+#!   STICKY="true"
+#!   COLOUR="0.7803921568627451,0.40784313725490196,0.070588235294117646,0.39215686274509803"
+#!   CONTENTS="6 29 35 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="66"
+#!   NAME="US Census Planning Database Call"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-1280.8599999999999 1110.3559311455183"
+#!   ORDER="500000000000000"
+#!   BOTTOM_RIGHT="120.69000000000005 331.03399999999999"
+#!   BOUNDING_RECT="-1280.8599999999999 1110.3559311455183 1401.55 779.32193114551831"
+#!   STICKY="true"
+#!   COLOUR="0.27843137254901962,0.38823529411764707,0.68235294117647061,0.39215686274509803"
+#!   CONTENTS="5 34 21 45 36 20 7 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="67"
+#!   NAME="Parse JSON Response"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="167.43299999999999 1220.7"
+#!   ORDER="500000000000000"
+#!   BOTTOM_RIGHT="2070.2909731800019 331.03600000000006"
+#!   BOUNDING_RECT="167.43299999999999 1220.7 1902.8579731800019 889.66399999999999"
+#!   STICKY="true"
+#!   COLOUR="0.78431372549019607,0.52549019607843139,0.53333333333333333,0.39215686274509803"
+#!   CONTENTS="48 19 58 43 16 44 52 56 27 30 17 46 18 42 57 73 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="68"
+#!   NAME="Reproject Incoming Data"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="-2884.0300000000002 1374.22"
+#!   ORDER="500000000000000"
+#!   BOTTOM_RIGHT="-2210.3680000000004 331.03999999999996"
+#!   BOUNDING_RECT="-2884.0300000000002 1374.22 673.66200000000003 1043.1800000000001"
+#!   STICKY="true"
+#!   COLOUR="0.53333333333333333,0.53333333333333333,0.53333333333333333,0.39215686274509803"
+#!   CONTENTS="9 28 10 40 8 38 37 "
+#! >
+#! </BOOKMARK>
+#! <BOOKMARK
+#!   IDENTIFIER="73"
+#!   NAME="Formatting and Cleanup"
+#!   DESCRIPTION=""
+#!   TOP_LEFT="892.54259457999979 1112.6836486500001"
+#!   ORDER="500000000000000.13"
+#!   BOTTOM_RIGHT="2009.2465603127605 379.03454523827622"
+#!   BOUNDING_RECT="892.54259457999979 1112.6836486500001 1116.7039657327607 733.6491034117239"
+#!   STICKY="true"
+#!   COLOUR="0.31372549019607843,0.53333333333333333,0.17254901960784313,0.39215686274509803"
+#!   CONTENTS="48 19 43 44 52 27 30 46 42 "
+#! >
+#! </BOOKMARK>
+#! </BOOKMARKS>
+#! <TRANSFORMERS>
+#! <TRANSFORMER
+#!   IDENTIFIER="5"
+#!   TYPE="HTTPCaller"
+#!   VERSION="1"
+#!   POSITION="-442.36000000000001 911.66399999999999"
+#!   BOUNDING_RECT="-442.36000000000001 911.66399999999999 -1 -1"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="17539"
+#! >
+#!     <OUTPUT_FEAT NAME="Output"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_error" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_PARAMETERS_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="ADDITIONAL_URL_PARAMETERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_REQUEST_PARAMETERS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="ADVANCED_RESPONSE_PARAMETERS" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_METHOD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_NAMED_CONNECTION" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_PASSWORD" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AUTH_USERNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="CONNECTION_TIMEOUT_LENGTH" PARM_VALUE="60"/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CUSTOM_HEADERS_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="ERROR_ATTR" PARM_VALUE="_error"/>
+#!     <XFORM_PARM PARM_NAME="FILE_PATH_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILE_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FOLLOW_REDIRECTS" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="HTTPURL_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="HTTP_AUTH_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_METHOD" PARM_VALUE="GET"/>
+#!     <XFORM_PARM PARM_NAME="HTTP_RESPONSE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MULTIPARTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTIPART_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_DIRNAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FILENAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_FILE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RESPONSE_HEADER_LIST_ATTR" PARM_VALUE="_headers"/>
+#!     <XFORM_PARM PARM_NAME="SAVE_FILE" PARM_VALUE="Attribute"/>
+#!     <XFORM_PARM PARM_NAME="SAVE_MULTI" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="STATUS_CODE_ATTR" PARM_VALUE="_http_status_code"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR" PARM_VALUE="_response_body"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_ATTR_ENCODING" PARM_VALUE="auto-detect"/>
+#!     <XFORM_PARM PARM_NAME="TARGET_URL" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;url2&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFER_TIMEOUT_LENGTH" PARM_VALUE="90"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_BODY" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_CONTENT_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_FILE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="UPLOAD_TYPE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="USE_COOKIES" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="VERIFY_SSL_CERTIFICATES" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="HTTPCaller_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="6"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="-1968.74 969.87599999999998"
+#!   BOUNDING_RECT="-1968.74 969.87599999999998 430 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_coordinates" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; url SET_TO https:&lt;solidus&gt;&lt;solidus&gt;tigerweb.geo.census.gov&lt;solidus&gt;arcgis&lt;solidus&gt;rest&lt;solidus&gt;services&lt;solidus&gt;Generalized_ACS2016&lt;solidus&gt;Tracts_Blocks&lt;solidus&gt;MapServer&lt;solidus&gt;4&lt;solidus&gt;query?where=1%3D1&lt;amp&gt;geometry=&lt;at&gt;Value&lt;openparen&gt;_coordinates&lt;closeparen&gt;&lt;amp&gt;geometryType=esriGeometryPoint&lt;amp&gt;inSR=esriSpatialRelIntersects&lt;amp&gt;outFields=*&lt;amp&gt;returnGeometry=true&lt;amp&gt;returnTrueCurves=false&lt;amp&gt;returnIdsOnly=false&lt;amp&gt;returnCountOnly=false&lt;amp&gt;returnZ=false&lt;amp&gt;returnM=false&lt;amp&gt;returnDistinctValues=false&lt;amp&gt;f=geojson"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="7"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="-1130.010275857931 613.98800000000006"
+#!   BOUNDING_RECT="-1130.010275857931 613.98800000000006 430 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE="FME_DISCLOSURE_CLOSED"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; url2 SET_TO https:&lt;solidus&gt;&lt;solidus&gt;api.census.gov&lt;solidus&gt;data&lt;solidus&gt;2016&lt;solidus&gt;pdb&lt;solidus&gt;blockgroup?get=County_name&lt;comma&gt;State_name&lt;comma&gt;LAND_AREA&lt;comma&gt;Block_Group&lt;comma&gt;Tot_Population_ACS_10_14&lt;comma&gt;Males_ACS_10_14&lt;comma&gt;Females_ACS_10_14&lt;comma&gt;Pop_65plus_ACS_10_14&lt;comma&gt;Pop_under_5_ACS_10_14&lt;comma&gt;Pop_5_17_ACS_10_14&lt;comma&gt;Pop_18_24_ACS_10_14&lt;comma&gt;Pop_25_44_ACS_10_14&lt;comma&gt;Pop_45_64_ACS_10_14&lt;comma&gt;Pop_65plus_ACS_10_14&lt;comma&gt;NH_White_alone_ACS_10_14&lt;comma&gt;NH_Blk_alone_ACS_10_14&lt;comma&gt;NH_AIAN_alone_ACS_10_14&lt;comma&gt;NH_Asian_alone_ACS_10_14&lt;comma&gt;NH_NHOPI_alone_ACS_10_14&lt;comma&gt;NH_SOR_alone_ACS_10_14&lt;comma&gt;Hispanic_ACS_10_14&lt;comma&gt;Tot_Housing_Units_ACS_10_14&lt;comma&gt;Tot_Vacant_Units_ACS_10_14&lt;comma&gt;Owner_Occp_HU_ACS_10_14&lt;comma&gt;Renter_Occp_HU_ACS_10_14&lt;comma&gt;Tot_Vacant_Units_ACS_10_14&lt;comma&gt;avg_Tot_Prns_in_HHD_ACS_10_14&lt;comma&gt;Med_HHD_Inc_BG_ACS_10_14&lt;comma&gt;Prs_Blw_Pov_Lev_ACS_10_14&lt;comma&gt;Med_House_Value_BG_ACS_10_14&lt;comma&gt;Not_HS_Grad_ACS_10_14&lt;comma&gt;College_ACS_10_14&lt;comma&gt;No_Health_Ins_ACS_10_14&lt;amp&gt;for=block+group:&lt;at&gt;Value&lt;openparen&gt;BLKGRP&lt;closeparen&gt;&lt;amp&gt;in=state:&lt;at&gt;Value&lt;openparen&gt;STATE&lt;closeparen&gt;&lt;amp&gt;in=county:&lt;at&gt;Value&lt;openparen&gt;COUNTY&lt;closeparen&gt;&lt;amp&gt;in=tract:&lt;at&gt;Value&lt;openparen&gt;TRACT&lt;closeparen&gt;&lt;amp&gt;key=$(APIkey)"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="8"
+#!   TYPE="VertexCreator"
+#!   VERSION="3"
+#!   POSITION="-2783.8200000000002 1027.72"
+#!   BOUNDING_RECT="-2783.8200000000002 1027.72 430 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ADVANCED_PARAMETERS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="INDEX" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MEASURE_TYPE" PARM_VALUE="Continuous"/>
+#!     <XFORM_PARM PARM_NAME="MISSING_VAL_MODE" PARM_VALUE="None (Drop Values)"/>
+#!     <XFORM_PARM PARM_NAME="MODE_NAME" PARM_VALUE="Add Point"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="VertexCreator"/>
+#!     <XFORM_PARM PARM_NAME="XVAL" PARM_VALUE="@Value(_indices{0}.x)"/>
+#!     <XFORM_PARM PARM_NAME="YVAL" PARM_VALUE="@Value(_indices{0}.y)"/>
+#!     <XFORM_PARM PARM_NAME="ZVAL" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="9"
+#!   TYPE="CoordinateExtractor"
+#!   VERSION="3"
+#!   POSITION="-2769.5700000000002 1246.54"
+#!   BOUNDING_RECT="-2769.5700000000002 1246.54 448.59481825772946 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="ALL_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="IND" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="INDEX_ATTRIBUTES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="_indices"/>
+#!     <XFORM_PARM PARM_NAME="MODE" PARM_VALUE="All Coordinates"/>
+#!     <XFORM_PARM PARM_NAME="MODE_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CoordinateExtractor"/>
+#!     <XFORM_PARM PARM_NAME="X_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="Y_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="Z_ATTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="Z_DEFAULT" PARM_VALUE=""/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="10"
+#!   TYPE="CsmapReprojector"
+#!   VERSION="2"
+#!   POSITION="-2776.6300000000001 776.274"
+#!   BOUNDING_RECT="-2776.6300000000001 776.274 -1 -1"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18528"
+#! >
+#!     <OUTPUT_FEAT NAME="REPROJECTED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="COORDSYS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="DEST" PARM_VALUE="EPSG:3857"/>
+#!     <XFORM_PARM PARM_NAME="GEOID_HEIGHT_GRID" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="INTERPOLATION_TYPE_NAME" PARM_VALUE="Nearest Neighbor"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_CELL_SIZE" PARM_VALUE="Preserve Cells"/>
+#!     <XFORM_PARM PARM_NAME="RASTER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="RASTER_TOLERANCE" PARM_VALUE="0.0"/>
+#!     <XFORM_PARM PARM_NAME="SOURCE" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMATION" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VERTICAL_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VERTICAL_HANDLING" PARM_VALUE="Ignore heights and leave them unchanged"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CsmapReprojector"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="16"
+#!   TYPE="JSONExtractor"
+#!   VERSION="4"
+#!   POSITION="267.43700000000001 1076.1400000000001"
+#!   BOUNDING_RECT="267.43700000000001 1076.1400000000001 430 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="EVALUATED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="EXTRACT_QUERY_TABLE" PARM_VALUE="attrnames json&lt;openbracket&gt;0&lt;closebracket&gt; attrvalues json&lt;openbracket&gt;1&lt;closebracket&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILEPATH_OR_URL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="INPUT_SETTINGS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="JSON_DOCUMENT" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;_response_body&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="QUERY_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="READ_FROM_FILE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONExtractor"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="17"
+#!   TYPE="JSONFragmenter"
+#!   VERSION="7"
+#!   POSITION="274.60199999999998 836.87800000000004"
+#!   BOUNDING_RECT="274.60199999999998 836.87800000000004 440.37606825772946 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="FRAGMENTS"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="EXPLODE_FORMAT" PARM_VALUE="JSON"/>
+#!     <XFORM_PARM PARM_NAME="EXTRACT_ATTR" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="FILEPATH_OR_URL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FLATTEN_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="INPUT_SETTINGS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="JSON_ATTR" PARM_VALUE="attrnames"/>
+#!     <XFORM_PARM PARM_NAME="JSON_QUERY" PARM_VALUE="json&lt;openbracket&gt;*&lt;closebracket&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NEW_ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PREF_STRING" PARM_VALUE="_attrnames"/>
+#!     <XFORM_PARM PARM_NAME="READ_FROM_FILE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="RECURSIVE" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="REJECT_EMPTY_LISTS" PARM_VALUE="YES"/>
+#!     <XFORM_PARM PARM_NAME="RESULT_ATTRIBUTE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONFragmenter_4"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="18"
+#!   TYPE="JSONExtractor"
+#!   VERSION="4"
+#!   POSITION="301.92000000000002 579.54200000000003"
+#!   BOUNDING_RECT="301.92000000000002 579.54200000000003 430 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="EVALUATED"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_PARM PARM_NAME="EXTRACT_QUERY_TABLE" PARM_VALUE="attrvalues json&lt;openbracket&gt;&lt;at&gt;Value&lt;openparen&gt;json_index&lt;closeparen&gt;&lt;closebracket&gt;"/>
+#!     <XFORM_PARM PARM_NAME="FILEPATH_OR_URL" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="INPUT_SETTINGS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="JSON_DOCUMENT" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;attrvalues&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="QUERY_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="READ_FROM_FILE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="JSONExtractor_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="19"
+#!   TYPE="AttributeCreator"
+#!   VERSION="9"
+#!   POSITION="966.54259457999979 985.52813515000025"
+#!   BOUNDING_RECT="966.54259457999979 985.52813515000025 430 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="&quot;&quot; &lt;at&gt;Value&lt;openparen&gt;attrnames&lt;closeparen&gt; SET_TO &lt;at&gt;Value&lt;openparen&gt;attrvalues&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeCreator_9"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="20"
+#!   TYPE="Dissolver"
+#!   VERSION="16"
+#!   POSITION="-1130.010275857931 986.40551727862101"
+#!   BOUNDING_RECT="-1130.010275857931 986.40551727862101 430 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="AREA"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="REMNANTS"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_remnant_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_INPUT_ATTRS" PARM_VALUE="Use Attributes From One Feature"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="AV" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CLEANING_TOLERANCE" PARM_VALUE="None"/>
+#!     <XFORM_PARM PARM_NAME="CONNECT_Z_MODE" PARM_VALUE="First Wins"/>
+#!     <XFORM_PARM PARM_NAME="DEAGGREGATE_INPUT" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="DIS_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="BLKGRP TRACT"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NO_OVRLP" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP_ADVANCED" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PROPER_NODED" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="SUM" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WEIGHT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Dissolver"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="21"
+#!   TYPE="StringConcatenator"
+#!   VERSION="7"
+#!   POSITION="-443.79300000000001 613.98800000000006"
+#!   BOUNDING_RECT="-443.79300000000001 613.98800000000006 -1 -1"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18197"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ACTION" PARM_VALUE="Create New Attribute"/>
+#!     <XFORM_PARM PARM_NAME="ATTRLIST" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAM_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARM_LINE" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;STATE&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;COUNTY&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;TRACT&lt;closeparen&gt;&lt;at&gt;Value&lt;openparen&gt;BLKGRP&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="VAL_ATTR" PARM_VALUE="GEOID"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="StringConcatenator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="27"
+#!   TYPE="AttributeManager"
+#!   VERSION="2"
+#!   POSITION="1504.0491463558626 985.52813515000025"
+#!   BOUNDING_RECT="1504.0491463558626 985.52813515000025 438.78231825772946 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_HANDLING" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="attrnames attrnames  REMOVE attrvalues attrvalues  REMOVE url2 url2  REMOVE STATE STATE  REMOVE COUNTY COUNTY  REMOVE TRACT TRACT  NO_OP BLKGRP BLKGRP  NO_OP _headers&lt;opencurly&gt;&lt;closecurly&gt;.name _headers&lt;opencurly&gt;&lt;closecurly&gt;.name  REMOVE _headers&lt;opencurly&gt;&lt;closecurly&gt;.value _headers&lt;opencurly&gt;&lt;closecurly&gt;.value  REMOVE _response_body _response_body  REMOVE _http_status_code _http_status_code  REMOVE json_type json_type  REMOVE json_index json_index  REMOVE GEOID GEOID  NO_OP"/>
+#!     <XFORM_PARM PARM_NAME="MULTI_FEATURE_MODE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_MODE_DISPLAY" PARM_VALUE="No Substitution"/>
+#!     <XFORM_PARM PARM_NAME="NULL_ATTR_VALUE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_PRIOR_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NUM_SUBSEQUENT_FEATURES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeManager_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="28"
+#!   TYPE="CoordinateConcatenator"
+#!   VERSION="4"
+#!   POSITION="-2769.5700000000002 539.98099999999999"
+#!   BOUNDING_RECT="-2769.5700000000002 539.98099999999999 529.36044325772946 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_coordinates" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="COORDINATES_TO_INCLUDE_DIS" PARM_VALUE="Y X"/>
+#!     <XFORM_PARM PARM_NAME="COORD_ATTR" PARM_VALUE="_coordinates"/>
+#!     <XFORM_PARM PARM_NAME="COORD_DELIM" PARM_VALUE="|"/>
+#!     <XFORM_PARM PARM_NAME="ELEMENT_DELIM" PARM_VALUE="&lt;comma&gt;"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="CoordinateConcatenator"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="29"
+#!   TYPE="FeatureReader"
+#!   VERSION="11"
+#!   POSITION="-1965.71 768.61599999999999"
+#!   BOUNDING_RECT="-1965.71 768.61599999999999 -1 -1"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="&lt;SCHEMA&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_coordinates" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_feature_type_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attribute{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attribute{}.fme_data_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attribute{}.native_data_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_format_short_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_format_long_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="fme_schema_handling" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="&lt;OTHER&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="INITIATOR"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="url" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_coordinates" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_matched_records" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="3"/>
+#!     <XFORM_ATTR ATTR_NAME="url" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.x" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.y" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_indices{}.z" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_coordinates" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_ATTR ATTR_NAME="_reader_error" IS_USER_CREATED="false" FEAT_INDEX="3" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTRS_TO_EXPOSE" PARM_VALUE="STATE COUNTY TRACT BLKGRP"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_MODE" PARM_VALUE="Only Use Result"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_CONFLICT_RES" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_PREFIX" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="AVAILABLE_FEATURE_TYPES" PARM_VALUE="_FEATUREREADER_OPTIONAL_FTTR_"/>
+#!     <XFORM_PARM PARM_NAME="CACHE_TIMEOUT_HRS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="COMBINE_GEOM" PARM_VALUE="Use Result"/>
+#!     <XFORM_PARM PARM_NAME="CONSTRAINTS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="COORDSYS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="DATASET" PARM_VALUE="&lt;at&gt;Value&lt;openparen&gt;url&lt;closeparen&gt;"/>
+#!     <XFORM_PARM PARM_NAME="DYNGROUP_0" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ENABLE_CACHE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="FEATURETYPES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="FORMAT" PARM_VALUE="GEOJSON"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_DIRECTIVES" PARM_VALUE="META_MACROS,SourceFLATTEN_MODE&lt;comma&gt;ALL_LEVELS&lt;comma&gt;SourceEXPOSE_ATTRS_GROUP&lt;comma&gt;&lt;comma&gt;SourceGEOJSON_EXPOSE_FORMAT_ATTRS&lt;comma&gt;&lt;comma&gt;SourceUSE_BASENAME_AS_DEFAULT_FEATURE_TYPE&lt;comma&gt;Yes&lt;comma&gt;SourceUSE_SEARCH_ENVELOPE&lt;comma&gt;NO&lt;comma&gt;SourceSEARCH_ENVELOPE_MINX&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MINY&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MAXX&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_MAXY&lt;comma&gt;0&lt;comma&gt;SourceSEARCH_ENVELOPE_COORDINATE_SYSTEM&lt;comma&gt;&lt;comma&gt;SourceCLIP_TO_ENVELOPE&lt;comma&gt;NO,METAFILE,GEOJSON"/>
+#!     <XFORM_PARM PARM_NAME="FORMAT_PARAMS" PARM_VALUE="GEOJSON_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,&quot;OPTIONAL NO_EDIT TEXT&quot;,GEOJSON&lt;space&gt;,GEOJSON_GEOJSON_EXPOSE_FORMAT_ATTRS,&quot;OPTIONAL LITERAL EXPOSED_ATTRS GEOJSON%Source&quot;,GEOJSON&lt;space&gt;Additional&lt;space&gt;Attributes&lt;space&gt;to&lt;space&gt;Expose:,GEOJSON_FLATTEN_MODE,&quot;OPTIONAL LOOKUP_CHOICE Yes,ALL_LEVELS%No,ONE_LEVEL&quot;,GEOJSON&lt;space&gt;Flatten&lt;space&gt;Nested&lt;space&gt;JSON&lt;space&gt;Values&lt;space&gt;into&lt;space&gt;Attributes:,GEOJSON_USE_SEARCH_ENVELOPE,&quot;OPTIONAL ACTIVEDISCLOSUREGROUP SEARCH_ENVELOPE_MINX%SEARCH_ENVELOPE_MINY%SEARCH_ENVELOPE_MAXX%SEARCH_ENVELOPE_MAXY%SEARCH_ENVELOPE_COORDINATE_SYSTEM%CLIP_TO_ENVELOPE%SEARCH_METHOD%SEARCH_METHOD_FILTER%SEARCH_ORDER%SEARCH_FEATURE%DUMMY_SEARCH_ENVELOPE_PARAMETER&quot;,GEOJSON&lt;space&gt;Use&lt;space&gt;Search&lt;space&gt;Envelope,GEOJSON_EXPOSE_ATTRS_GROUP,&quot;OPTIONAL DISCLOSUREGROUP GEOJSON_EXPOSE_FORMAT_ATTRS&quot;,GEOJSON&lt;space&gt;Schema&lt;space&gt;Attributes"/>
+#!     <XFORM_PARM PARM_NAME="FTTR_SEPARATOR" PARM_VALUE="SPACE"/>
+#!     <XFORM_PARM PARM_NAME="GENERIC_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_EXPOSE_ATTRS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_FLATTEN_MODE" PARM_VALUE="ALL_LEVELS"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_GEOJSON_EXPOSE_FORMAT_ATTRS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_USE_BASENAME_AS_DEFAULT_FEATURE_TYPE" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="GEOJSON_USE_SEARCH_ENVELOPE" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="INTERACT" PARM_VALUE="&lt;No Spatial Filter&gt;"/>
+#!     <XFORM_PARM PARM_NAME="MAX_FEATURES" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="MERGE_HANDLING_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUTPORTS_GROUP" PARM_VALUE="FME_DISCLOSURE_OPEN"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FEATURES_DISPLAY" PARM_VALUE="Schema and Data Features"/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_FEATURES_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="OUTPUT_PORTS_MODE" PARM_VALUE="SINGLE_PORT"/>
+#!     <XFORM_PARM PARM_NAME="PORTS_FROM_FTTR" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="READER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="READ_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SELECTED_PORTS" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="SINGLE_PORT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="SUPPORTED_SPATIAL_INTERACTIONS" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WHERE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="FeatureReader"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="30"
+#!   TYPE="Dissolver"
+#!   VERSION="16"
+#!   POSITION="966.54259457999979 747.50164865000011"
+#!   BOUNDING_RECT="966.54259457999979 747.50164865000011 430 71"
+#!   ORDER="500000000000000"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="AREA"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <OUTPUT_FEAT NAME="REMNANTS"/>
+#!     <FEAT_COLLAPSED COLLAPSED="1"/>
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <XFORM_ATTR ATTR_NAME="fme_remnant_type" IS_USER_CREATED="false" FEAT_INDEX="1" />
+#!     <OUTPUT_FEAT NAME="&lt;REJECTED&gt;"/>
+#!     <FEAT_COLLAPSED COLLAPSED="2"/>
+#!     <XFORM_ATTR ATTR_NAME="url2" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="STATE" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="COUNTY" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.name" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_headers{}.value" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_response_body" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="_http_status_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="attrnames" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="attrvalues" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="json_type" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="json_index" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_ATTR ATTR_NAME="fme_rejection_code" IS_USER_CREATED="false" FEAT_INDEX="2" />
+#!     <XFORM_PARM PARM_NAME="ACCUM_INPUT_ATTRS" PARM_VALUE="Merge Incoming Attributes"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_ACCUM_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="AV" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="CLEANING_TOLERANCE" PARM_VALUE="None"/>
+#!     <XFORM_PARM PARM_NAME="CONNECT_Z_MODE" PARM_VALUE="First Wins"/>
+#!     <XFORM_PARM PARM_NAME="DEAGGREGATE_INPUT" PARM_VALUE="Yes"/>
+#!     <XFORM_PARM PARM_NAME="DIS_ATTR" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="GENERATE_LIST_GROUP" PARM_VALUE="NO"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY" PARM_VALUE="TRACT BLKGRP"/>
+#!     <XFORM_PARM PARM_NAME="GROUP_BY_MODE" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_ATTRS_TO_INCLUDE_MODE" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="LIST_NAME" PARM_VALUE="&lt;Unused&gt;"/>
+#!     <XFORM_PARM PARM_NAME="NO_OVRLP" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PARAMETERS_GROUP_ADVANCED" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="PROPER_NODED" PARM_VALUE="No"/>
+#!     <XFORM_PARM PARM_NAME="SUM" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="WEIGHT" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="Dissolver_2"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="42"
+#!   TYPE="AttributeExposer"
+#!   VERSION="1"
+#!   POSITION="1493.238227435862 786.53191335206952"
+#!   BOUNDING_RECT="1493.238227435862 786.53191335206952 -1 -1"
+#!   ORDER="500000000000002"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="18528"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="TRACT" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="BLKGRP" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pop_45_64_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NH_AIAN_alone_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Females_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pop_65plus_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NH_Asian_alone_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NH_SOR_alone_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Hispanic_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NH_White_alone_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pop_5_17_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Med_HHD_Inc_BG_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pop_25_44_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Tot_Vacant_Units_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Tot_Housing_Units_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="No_Health_Ins_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pop_under_5_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Prs_Blw_Pov_Lev_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Not_HS_Grad_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="College_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Pop_18_24_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Owner_Occp_HU_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Med_House_Value_BG_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="avg_Tot_Prns_in_HHD_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Tot_Population_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Males_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Renter_Occp_HU_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NH_NHOPI_alone_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="NH_Blk_alone_ACS_10_14" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="State_name" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="LAND_AREA" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTR_LIST" PARM_VALUE="Pop_45_64_ACS_10_14,NH_AIAN_alone_ACS_10_14,Females_ACS_10_14,Pop_65plus_ACS_10_14,NH_Asian_alone_ACS_10_14,NH_SOR_alone_ACS_10_14,Hispanic_ACS_10_14,NH_White_alone_ACS_10_14,Pop_5_17_ACS_10_14,Med_HHD_Inc_BG_ACS_10_14,Pop_25_44_ACS_10_14,Tot_Vacant_Units_ACS_10_14,Tot_Housing_Units_ACS_10_14,No_Health_Ins_ACS_10_14,Pop_under_5_ACS_10_14,Prs_Blw_Pov_Lev_ACS_10_14,Not_HS_Grad_ACS_10_14,College_ACS_10_14,Pop_18_24_ACS_10_14,Owner_Occp_HU_ACS_10_14,Med_House_Value_BG_ACS_10_14,avg_Tot_Prns_in_HHD_ACS_10_14,Tot_Population_ACS_10_14,Pop_65plus_ACS_10_14,Tot_Vacant_Units_ACS_10_14,Males_ACS_10_14,Renter_Occp_HU_ACS_10_14,NH_NHOPI_alone_ACS_10_14,NH_Blk_alone_ACS_10_14,State_name,LAND_AREA"/>
+#!     <XFORM_PARM PARM_NAME="ATTR_LIST_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeExposer"/>
+#! </TRANSFORMER>
+#! <TRANSFORMER
+#!   IDENTIFIER="46"
+#!   TYPE="AttributeRenamer"
+#!   VERSION="4"
+#!   POSITION="1504.0491463558626 590.2616486500001"
+#!   BOUNDING_RECT="1504.0491463558626 590.2616486500001 430 71"
+#!   ORDER="500000000000003"
+#!   PARMS_EDITED="true"
+#!   ENABLED="true"
+#!   LAST_PARM_EDIT="19151"
+#! >
+#!     <OUTPUT_FEAT NAME="OUTPUT"/>
+#!     <FEAT_COLLAPSED COLLAPSED="0"/>
+#!     <XFORM_ATTR ATTR_NAME="Total Population" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Females" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Males" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Hispanic" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Hawaiian" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Caucasian" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Native American" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Black or African American" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Asian" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Other Ethnicity" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Under 5" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="5 to 17" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="18 to 24" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="25 to 44" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="45 to 64" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="65 or Over" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Total Housing Units" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Owner Occupied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Renter Occupied" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Average Household Occupancy" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Total Vacant Units" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Median Home Value" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Median Household Income" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Population Below Poverty Level" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Population Without Health Insurance" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Population Without High School Diploma" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Population With College Credential" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="State" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Census Tract" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Census Block Group" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="GEOID" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_ATTR ATTR_NAME="Area (sq. mi.)" IS_USER_CREATED="false" FEAT_INDEX="0" />
+#!     <XFORM_PARM PARM_NAME="ATTRIBUTE_GRP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="ATTR_TABLE" PARM_VALUE="Tot_Population_ACS_10_14 Total&lt;space&gt;Population RENAME_SET_DEFAULT  Females_ACS_10_14 Females RENAME_SET_DEFAULT  Males_ACS_10_14 Males RENAME_SET_DEFAULT  Hispanic_ACS_10_14 Hispanic RENAME_SET_DEFAULT  NH_NHOPI_alone_ACS_10_14 Hawaiian RENAME_SET_DEFAULT  NH_White_alone_ACS_10_14 Caucasian RENAME_SET_DEFAULT  NH_AIAN_alone_ACS_10_14 Native&lt;space&gt;American RENAME_SET_DEFAULT  NH_Blk_alone_ACS_10_14 Black&lt;space&gt;or&lt;space&gt;African&lt;space&gt;American RENAME_SET_DEFAULT  NH_Asian_alone_ACS_10_14 Asian RENAME_SET_DEFAULT  NH_SOR_alone_ACS_10_14 Other&lt;space&gt;Ethnicity RENAME_SET_DEFAULT  Pop_under_5_ACS_10_14 Under&lt;space&gt;5 RENAME_SET_DEFAULT  Pop_5_17_ACS_10_14 5&lt;space&gt;to&lt;space&gt;17 RENAME_SET_DEFAULT  Pop_18_24_ACS_10_14 18&lt;space&gt;to&lt;space&gt;24 RENAME_SET_DEFAULT  Pop_25_44_ACS_10_14 25&lt;space&gt;to&lt;space&gt;44 RENAME_SET_DEFAULT  Pop_45_64_ACS_10_14 45&lt;space&gt;to&lt;space&gt;64 RENAME_SET_DEFAULT  Pop_65plus_ACS_10_14 65&lt;space&gt;or&lt;space&gt;Over RENAME_SET_DEFAULT  Tot_Housing_Units_ACS_10_14 Total&lt;space&gt;Housing&lt;space&gt;Units RENAME_SET_DEFAULT  Owner_Occp_HU_ACS_10_14 Owner&lt;space&gt;Occupied RENAME_SET_DEFAULT  Renter_Occp_HU_ACS_10_14 Renter&lt;space&gt;Occupied RENAME_SET_DEFAULT  avg_Tot_Prns_in_HHD_ACS_10_14 Average&lt;space&gt;Household&lt;space&gt;Occupancy RENAME_SET_DEFAULT  Tot_Vacant_Units_ACS_10_14 Total&lt;space&gt;Vacant&lt;space&gt;Units RENAME_SET_DEFAULT  Med_House_Value_BG_ACS_10_14 Median&lt;space&gt;Home&lt;space&gt;Value RENAME_SET_DEFAULT  Med_HHD_Inc_BG_ACS_10_14 Median&lt;space&gt;Household&lt;space&gt;Income RENAME_SET_DEFAULT  Prs_Blw_Pov_Lev_ACS_10_14 Population&lt;space&gt;Below&lt;space&gt;Poverty&lt;space&gt;Level RENAME_SET_DEFAULT  No_Health_Ins_ACS_10_14 Population&lt;space&gt;Without&lt;space&gt;Health&lt;space&gt;Insurance RENAME_SET_DEFAULT  Not_HS_Grad_ACS_10_14 Population&lt;space&gt;Without&lt;space&gt;High&lt;space&gt;School&lt;space&gt;Diploma RENAME_SET_DEFAULT  College_ACS_10_14 Population&lt;space&gt;With&lt;space&gt;College&lt;space&gt;Credential RENAME_SET_DEFAULT  State_name State RENAME_SET_DEFAULT  TRACT Census&lt;space&gt;Tract RENAME_SET_DEFAULT  BLKGRP Census&lt;space&gt;Block&lt;space&gt;Group RENAME_SET_DEFAULT  GEOID GEOID RENAME_SET_DEFAULT  LAND_AREA Area&lt;space&gt;&lt;openparen&gt;sq.&lt;space&gt;mi.&lt;closeparen&gt; RENAME_SET_DEFAULT "/>
+#!     <XFORM_PARM PARM_NAME="TRANSFORMER_GROUP" PARM_VALUE=""/>
+#!     <XFORM_PARM PARM_NAME="XFORMER_NAME" PARM_VALUE="AttributeRenamer"/>
+#! </TRANSFORMER>
+#! </TRANSFORMERS>
+#! <SUBDOCUMENT_IOS>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="2"
+#!   NAME="Points"
+#!   POSITION="-3711.5599999999999 584.80899999999997"
+#!   BOUNDING_RECT="-3711.5599999999999 584.80899999999997 -1 -1"
+#!   COLLAPSED="true"
+#!   PUBLISHED="true"
+#!   IS_SOURCE="true"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! <SUBDOCUMENT_IO
+#!   IDENTIFIER="3"
+#!   NAME="Areas"
+#!   POSITION="2231.9899999999998 576.74800000000005"
+#!   BOUNDING_RECT="2231.9899999999998 576.74800000000005 430 71"
+#!   COLLAPSED="true"
+#!   IS_SOURCE="false"
+#!   ATTR_MODE="0"
+#! >
+#! </SUBDOCUMENT_IO>
+#! </SUBDOCUMENT_IOS>
+#! <FEAT_LINKS>
+#! <FEAT_LINK
+#!   IDENTIFIER="32"
+#!   SOURCE_NODE="2"
+#!   TARGET_NODE="9"
+#!   SOURCE_PORT_DESC="0"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="34"
+#!   SOURCE_NODE="5"
+#!   TARGET_NODE="21"
+#!   SOURCE_PORT_DESC="fo 0 Output"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="35"
+#!   SOURCE_NODE="6"
+#!   TARGET_NODE="29"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 INITIATOR"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="36"
+#!   SOURCE_NODE="7"
+#!   TARGET_NODE="5"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="37"
+#!   SOURCE_NODE="8"
+#!   TARGET_NODE="10"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="38"
+#!   SOURCE_NODE="9"
+#!   TARGET_NODE="8"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="40"
+#!   SOURCE_NODE="10"
+#!   TARGET_NODE="28"
+#!   SOURCE_PORT_DESC="fo 0 REPROJECTED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="56"
+#!   SOURCE_NODE="16"
+#!   TARGET_NODE="17"
+#!   SOURCE_PORT_DESC="fo 0 EVALUATED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="58"
+#!   SOURCE_NODE="17"
+#!   TARGET_NODE="18"
+#!   SOURCE_PORT_DESC="fo 0 FRAGMENTS"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="57"
+#!   SOURCE_NODE="18"
+#!   TARGET_NODE="19"
+#!   SOURCE_PORT_DESC="fo 0 EVALUATED"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="52"
+#!   SOURCE_NODE="19"
+#!   TARGET_NODE="30"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="45"
+#!   SOURCE_NODE="20"
+#!   TARGET_NODE="7"
+#!   SOURCE_PORT_DESC="fo 0 AREA"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="54"
+#!   SOURCE_NODE="21"
+#!   TARGET_NODE="16"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="43"
+#!   SOURCE_NODE="27"
+#!   TARGET_NODE="42"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="41"
+#!   SOURCE_NODE="28"
+#!   TARGET_NODE="6"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="44"
+#!   SOURCE_NODE="30"
+#!   TARGET_NODE="27"
+#!   SOURCE_PORT_DESC="fo 0 AREA"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="48"
+#!   SOURCE_NODE="42"
+#!   TARGET_NODE="46"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="49"
+#!   SOURCE_NODE="46"
+#!   TARGET_NODE="3"
+#!   SOURCE_PORT_DESC="fo 0 OUTPUT"
+#!   TARGET_PORT_DESC="0"
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! <FEAT_LINK
+#!   IDENTIFIER="59"
+#!   SOURCE_NODE="29"
+#!   TARGET_NODE="20"
+#!   SOURCE_PORT_DESC="fo 1 &lt;lt&gt;OTHER&lt;gt&gt;"
+#!   TARGET_PORT_DESC="fi 0 "
+#!   ENABLED="true"
+#!   EXECUTION_IDX="0"
+#!   HIDDEN="false"
+#!   EXTRA_POINTS=""
+#! />
+#! </FEAT_LINKS>
+#! <BREAKPOINTS>
+#! </BREAKPOINTS>
+#! <ATTR_LINKS>
+#! </ATTR_LINKS>
+#! </SUBDOCUMENT>
+#! </SUBDOCUMENTS>
+#! <LOOKUP_TABLES>
+#! </LOOKUP_TABLES>
+#! </WORKSPACE>
+
+FME_PYTHON_VERSION 2or3
+GUI IGNORE DestDataset_GEOJSON_1,GEOJSON_OUT_FME_GROUP_NAMED1_GEOJSON_1,GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1,GEOJSON_OUT_WRITE_BOM_GEOJSON_1,GEOJSON_OUT_STRICT_SPEC_GEOJSON_1,GEOJSON_OUT_FME_GROUP_NAMED2_GEOJSON_1,GEOJSON_OUT_PRETTY_PRINT_GEOJSON_1,GEOJSON_OUT_INDENT_SIZE_GEOJSON_1,GEOJSON_OUT_MAX_COORDINATE_PRECISION_GEOJSON_1,GEOJSON_OUT_FME_GROUP_NAMED3_GEOJSON_1,GEOJSON_OUT_COUNTER_CLOCKWISE_AREAS_GEOJSON_1,GEOJSON_OUT_WGS84_REPROJECTION_GEOJSON_1,GEOJSON_OUT_FME_GROUP_NAMED4_GEOJSON_1,GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1
+DEFAULT_MACRO GEOM [{"type":"Feature","properties":{},"geometry":{"type":"Point","coordinates":[-115.18890380859376,39.37889504706486]}}] 
+GUI TEXT GEOM GEOM:
+DEFAULT_MACRO FME_SERVER_DEST_DIR $(FME_SHAREDRESOURCE_DATA)/census_data
+GUI IGNORE OPTIONAL DIRNAME_SRC FME_SERVER_DEST_DIR FME Server Destination Directory:
+INCLUDE [ if {{$(GEOM)} == {}} { puts_real {Parameter 'GEOM' must be given a value.}; exit 1; }; ]
+#! START_HEADER
+#! START_WB_HEADER
+READER_TYPE MULTI_READER
+WRITER_TYPE MULTI_WRITER
+MULTI_WRITER_DATASET_ORDER BY_ID
+MULTI_WRITER_FIRST_WRITER_ID 0
+MULTI_WRITER_TYPE{0} GEOJSON
+MULTI_WRITER_KEYWORD{0} GEOJSON_1
+#! END_WB_HEADER
+#! START_WB_HEADER
+MACRO WB_KEYWORD "GEOJSON_1"
+#! END_WB_HEADER
+#! START_DEST_HEADER GEOJSON GEOJSON_1
+#! END_DEST_HEADER
+#! START_WB_HEADER
+DEFAULT_MACRO DestDataset
+INCLUDE [ if {"$(DestDataset)" != ""} {                          \
+ puts {DEFAULT_MACRO DestDataset_GEOJSON_1 $(DestDataset)}         \
+ } ]
+#! END_WB_HEADER
+#! START_DEST_HEADER GEOJSON GEOJSON_1
+DEFAULT_MACRO DestDataset_GEOJSON_1 $(FME_SHAREDRESOURCE_DATA)/blockgroups.json
+GUI FILENAME DestDataset_GEOJSON_1 GeoJSON_Files(*.json)|*.json|All_Files|* Destination GeoJSON File:
+DEFAULT_MACRO GEOJSON_OUT_FME_GROUP_NAMED1_GEOJSON_1 
+GUI OPTIONAL DISCLOSUREGROUP GEOJSON_OUT_FME_GROUP_NAMED1_GEOJSON_1 GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1%GEOJSON_OUT_WRITE_BOM_GEOJSON_1%GEOJSON_OUT_STRICT_SPEC_GEOJSON_1 Writer Parameters
+DEFAULT_MACRO GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1 UTF-8
+GEOJSON_1_WRITER_CHARSET "$(GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1)"
+GUI LOOKUP_CHOICE GEOJSON_OUT_WRITER_CHARSET_GEOJSON_1 UTF-8,UTF-8%UTF-16,UTF-16%UTF-16BE,UTF-16BE%UTF-16LE,UTF-16LE%UTF-32,UTF-32%UTF-32BE,UTF-32BE%UTF-32LE,UTF-32LE Output Character Set:
+DEFAULT_MACRO GEOJSON_OUT_WRITE_BOM_GEOJSON_1 No
+GEOJSON_1_WRITE_BOM "$(GEOJSON_OUT_WRITE_BOM_GEOJSON_1)"
+GUI LOOKUP_CHOICE GEOJSON_OUT_WRITE_BOM_GEOJSON_1 Yes,Yes%No,No Byte Order Marker:
+DEFAULT_MACRO GEOJSON_OUT_STRICT_SPEC_GEOJSON_1 Yes
+GEOJSON_1_STRICT_SPEC "$(GEOJSON_OUT_STRICT_SPEC_GEOJSON_1)"
+GUI LOOKUP_CHOICE GEOJSON_OUT_STRICT_SPEC_GEOJSON_1 Yes,Yes%No,No Fully Conform to the GeoJSON Grammar:
+DEFAULT_MACRO GEOJSON_OUT_FME_GROUP_NAMED2_GEOJSON_1 
+GUI OPTIONAL DISCLOSUREGROUP GEOJSON_OUT_FME_GROUP_NAMED2_GEOJSON_1 GEOJSON_OUT_PRETTY_PRINT_GEOJSON_1%GEOJSON_OUT_INDENT_SIZE_GEOJSON_1%GEOJSON_OUT_MAX_COORDINATE_PRECISION_GEOJSON_1 Formatting Parameters
+DEFAULT_MACRO GEOJSON_OUT_PRETTY_PRINT_GEOJSON_1 YES
+GEOJSON_1_PRETTY_PRINT "$(GEOJSON_OUT_PRETTY_PRINT_GEOJSON_1)"
+GUI ACTIVECHOICE_LOOKUP GEOJSON_OUT_PRETTY_PRINT_GEOJSON_1 Pretty<space>Print,YES%Linear,NO,GEOJSON_OUT_INDENT_SIZE_GEOJSON_1 Formatting Type:
+DEFAULT_MACRO GEOJSON_OUT_INDENT_SIZE_GEOJSON_1 0
+GEOJSON_1_INDENT_SIZE "$(GEOJSON_OUT_INDENT_SIZE_GEOJSON_1)"
+GUI LOOKUP_CHOICE GEOJSON_OUT_INDENT_SIZE_GEOJSON_1 Tabs,0%1<space>space,1%2<space>spaces,2%3<space>spaces,3%4<space>spaces,4%5<space>spaces,5%6<space>spaces,6%7<space>spaces,7%8<space>spaces,8 Indent Size:
+DEFAULT_MACRO GEOJSON_OUT_MAX_COORDINATE_PRECISION_GEOJSON_1 10
+GEOJSON_1_MAX_COORDINATE_PRECISION "$(GEOJSON_OUT_MAX_COORDINATE_PRECISION_GEOJSON_1)"
+GUI RANGE_SLIDER GEOJSON_OUT_MAX_COORDINATE_PRECISION_GEOJSON_1 1%15%0%ON Coordinate Precision (Maximum Number of Fractional Digits):
+DEFAULT_MACRO GEOJSON_OUT_FME_GROUP_NAMED3_GEOJSON_1 
+GUI OPTIONAL DISCLOSUREGROUP GEOJSON_OUT_FME_GROUP_NAMED3_GEOJSON_1 GEOJSON_OUT_COUNTER_CLOCKWISE_AREAS_GEOJSON_1%GEOJSON_OUT_WGS84_REPROJECTION_GEOJSON_1 Geometry
+DEFAULT_MACRO GEOJSON_OUT_COUNTER_CLOCKWISE_AREAS_GEOJSON_1 Yes
+GEOJSON_1_COUNTER_CLOCKWISE_AREAS "$(GEOJSON_OUT_COUNTER_CLOCKWISE_AREAS_GEOJSON_1)"
+GUI LOOKUP_CHOICE GEOJSON_OUT_COUNTER_CLOCKWISE_AREAS_GEOJSON_1 Yes,Yes%No,No Convert Areas to Counterclockwise:
+DEFAULT_MACRO GEOJSON_OUT_WGS84_REPROJECTION_GEOJSON_1 Yes
+GEOJSON_1_WGS84_REPROJECTION "$(GEOJSON_OUT_WGS84_REPROJECTION_GEOJSON_1)"
+GUI LOOKUP_CHOICE GEOJSON_OUT_WGS84_REPROJECTION_GEOJSON_1 Yes,Yes%No,No Reproject to WGS84:
+DEFAULT_MACRO GEOJSON_OUT_FME_GROUP_NAMED4_GEOJSON_1 
+GUI OPTIONAL DISCLOSUREGROUP GEOJSON_OUT_FME_GROUP_NAMED4_GEOJSON_1 GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1 JSONP
+DEFAULT_MACRO GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1 
+GEOJSON_1_JSONP_FUNC_NAME "$(GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1)"
+GUI OPTIONAL TEXT GEOJSON_OUT_JSONP_FUNC_NAME_GEOJSON_1 JSONP Function Name:
+# ============================================================================
+# Opt in for destination dataset type vs format type validation
+DEFAULT_MACRO GEOJSON_OUT_DESTINATION_DATASETTYPE_VALIDATION_GEOJSON_1 Yes
+GEOJSON_1_DESTINATION_DATASETTYPE_VALIDATION "$(GEOJSON_OUT_DESTINATION_DATASETTYPE_VALIDATION_GEOJSON_1)"
+# ============================================================================ 
+GEOJSON_1_GENERATE_FME_BUILD_NUM 18528
+GEOJSON_1_DATASET "$(DestDataset_GEOJSON_1)"
+#! END_DEST_HEADER
+#! START_WB_HEADER
+#! END_WB_HEADER
+#! END_HEADER
+
+LOG_FILENAME "$(FME_MF_DIR)uscensus.log"
+LOG_APPEND NO
+LOG_TIMINGS YES
+FME_DEBUG MAPPING_FILE BADNEWS FME_STACK_TRACE UNGROUPED UNCORRELATED DUMP_SCHEMA XSD_VERBOSE HTTP_DEBUG FTP_DEBUG
+LOG_FILTER_MASK -1
+LOG_MAX_FEATURES 200
+LOG_MAX_RECORDED_FEATURES 200
+FME_REPROJECTION_ENGINE FME
+FME_IMPLICIT_CSMAP_REPROJECTION_MODE Auto
+FME_GEOMETRY_HANDLING Enhanced
+FME_STROKE_MAX_DEVIATION 0
+DEFAULT_MACRO DATASET_KEYWORD_GEOJSON_1 GEOJSON_1
+# -------------------------------------------------------------------------
+
+MULTI_READER_CONTINUE_ON_READER_FAILURE No
+
+# -------------------------------------------------------------------------
+
+MACRO WORKSPACE_NAME uscensus
+MACRO FME_VIEWER_APP fmedatainspector
+DEFAULT_MACRO WB_CURRENT_CONTEXT
+# -------------------------------------------------------------------------
+Tcl2 proc Creator_CoordSysRemover {} {   global FME_CoordSys;   set FME_CoordSys {}; }
+MACRO Creator_XML     NOT_ACTIVATED
+MACRO Creator_CLASSIC NOT_ACTIVATED
+MACRO Creator_2D3D    2D_GEOMETRY
+MACRO Creator_COORDS  <Unused>
+INCLUDE [ if { {Geometry Object} == {Geometry Object} } {            puts {MACRO Creator_XML *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Coordinate List} } {            puts {MACRO Creator_2D3D 2D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {3D Coordinate List} } {            puts {MACRO Creator_2D3D 3D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+INCLUDE [ if { {Geometry Object} == {2D Min/Max Box} } {            set comment {                We need to turn the COORDS which are                    minX minY maxX maxY                into a full polygon list of coordinates            };            set splitCoords [split [string trim {<Unused>}]];            if { [llength $splitCoords] > 4} {               set trimmedCoords {};               foreach item $splitCoords { if { $item != {} } {lappend trimmedCoords $item} };               set splitCoords $trimmedCoords;            };            if { [llength $splitCoords] != 4 } {                error {Creator: Coordinate list is expected to be a space delimited list of four numbers as 'minx miny maxx maxy' - `<Unused>' is invalid};            };            set minX [lindex $splitCoords 0];            set minY [lindex $splitCoords 1];            set maxX [lindex $splitCoords 2];            set maxY [lindex $splitCoords 3];            puts "MACRO Creator_COORDS $minX $minY $minX $maxY $maxX $maxY $maxX $minY $minX $minY";            puts {MACRO Creator_2D3D 2D_GEOMETRY};            puts {MACRO Creator_CLASSIC *} } ]
+FACTORY_DEF $(Creator_XML) CreationFactory    FACTORY_NAME Creator_XML_Creator    CREATE_AT_END no    OUTPUT FEATURE_TYPE _____CREATED______        @Geometry(FROM_ENCODED_STRING,<lt>?xml<space>version=<quote>1.0<quote><space>encoding=<quote>US_ASCII<quote><space>standalone=<quote>no<quote><space>?<gt><lt>geometry<gt><lt>null<solidus><gt><lt><solidus>geometry<gt>)
+FACTORY_DEF $(Creator_CLASSIC) CreationFactory    FACTORY_NAME Creator_CLASSIC_Creator    $(Creator_2D3D) $(Creator_COORDS)    CREATE_AT_END no    OUTPUT FEATURE_TYPE _____CREATED______
+FACTORY_DEF * TeeFactory    FACTORY_NAME Creator_Cloner    INPUT FEATURE_TYPE _____CREATED______        @Tcl2(Creator_CoordSysRemover)        @CoordSys(LL84)    NUMBER_OF_COPIES 1    COPY_NUMBER_ATTRIBUTE "_creation_instance"    OUTPUT FEATURE_TYPE Creator_CREATED        fme_feature_type Creator
+FACTORY_DEF * BranchingFactory   FACTORY_NAME "Creator_CREATED Brancher -1 12"   INPUT FEATURE_TYPE Creator_CREATED   TARGET_FACTORY "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TARGET"   MAXIMUM_COUNT None   OUTPUT PASSED FEATURE_TYPE *
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(WB_CURRENT_CONTEXT)_CREATOR_BRANCH_TARGET"   INPUT FEATURE_TYPE *  OUTPUT FEATURE_TYPE *
+# -------------------------------------------------------------------------
+Tcl2 proc ParameterFetcher_doFetch {} {    foreach {name val} {"_GEOM {$(GEOM$encode)}"} {         if { [string match {*<at>*} $val] == 1 } {             set val [FME_Execute EvaluateExpression {STRING} $val {ParameterFetcher}];         } elseif {[string match {*FME_CONDITIONAL*} $val] == 1} {             set val [FME_Execute EvaluateExpression {STRING} $val {ParameterFetcher}];         } else {             set val [FME_DecodeTextOrAttr $val];         };       FME_SetAttribute [FME_DecodeText $name] $val    } }
+FACTORY_DEF * TeeFactory    FACTORY_NAME ParameterFetcher    INPUT  FEATURE_TYPE Creator_CREATED    OUTPUT FEATURE_TYPE ParameterFetcher_OUTPUT         @Tcl2(ParameterFetcher_doFetch)
+# -------------------------------------------------------------------------
+FACTORY_DEF * JSONQueryFactory    FACTORY_NAME JSONFragmenter    INPUT  FEATURE_TYPE ParameterFetcher_OUTPUT    MODE EXPLODE    EXPLODE_FORMAT GEOJSON    REJECT_EMPTY_LISTS YES    EXTRACT_ATTR No    JSON_ATTR "_GEOM"    READ_FROM_FILE NO    FILEPATH_OR_URL <Unused>    OUTPUT_ATTRIBUTE "<Unused>"    EXPLODE_QUERY "json<openbracket>*<closebracket>"    RECURSIVE_FLATTEN <Unused>    OUTPUT EXPLODED FEATURE_TYPE JSONFragmenter_FRAGMENTS    OUTPUT REJECTED FEATURE_TYPE JSONFragmenter_<REJECTED>
+FACTORY_DEF * TeeFactory   FACTORY_NAME "JSONFragmenter <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE JSONFragmenter_<REJECTED>
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory   FACTORY_NAME "SimpleUSCensusCaller Points Input Collector"   INPUT FEATURE_TYPE JSONFragmenter_FRAGMENTS   OUTPUT FEATURE_TYPE SimpleUSCensusCaller_Points
+MACRO USCensusCaller_WORKSPACE_NAME SimpleUSCensusCaller
+MACRO $(USCensusCaller_WORKSPACE_NAME)_XFORMER_NAME SimpleUSCensusCaller
+MACRO $(USCensusCaller_WORKSPACE_NAME)_TRANSFORMER_GROUP 
+MACRO $(USCensusCaller_WORKSPACE_NAME)_SUB_DOC_NAME USCensusCaller
+MACRO $(USCensusCaller_WORKSPACE_NAME)_APIkey 
+DEFAULT_MACRO USCensusCaller_WORKSPACE_NAME ""
+INCLUDE [puts {MACRO WB_OLD_CONTEXT_$(USCensusCaller_WORKSPACE_NAME) $(WB_CURRENT_CONTEXT)};          puts {MACRO WB_CURRENT_CONTEXT $(USCensusCaller_WORKSPACE_NAME)}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(USCensusCaller_WORKSPACE_NAME)_Points1546886326 Input Splitter"   INPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_Points"   OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_Points"
+# -------------------------------------------------------------------------
+INCLUDE [    set supplyZFunc {};    if { {} != {} }    {    };    puts "MACRO $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SUPPLY_Z ${supplyZFunc}"; ]
+FACTORY_DEF * TestFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_TESTZDEFAULT    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_Points"    TEST "" NOT_ATTRIBUTE_HAS_A_VALUE "" ENCODED    TEST "" TYPE NUM ENCODED    BOOLEAN_OPERATOR OR    OUTPUT PASSED FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_TESTMODE_INPUT
+FACTORY_DEF * TestFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_TESTMODE    INPUT FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_TESTMODE_INPUT    TEST "All Coordinates" == "All Coordinates"    OUTPUT PASSED FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_LIST_INPUT    OUTPUT FAILED FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_INPUT
+FACTORY_DEF * TestFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_LIST    INPUT FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_LIST_INPUT    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_OUTPUT"         @ZValue("")         @Coordinate(x,ALL,"_indices"{}.x,FLATTEN_AGGREGATE,YES)         @Coordinate(y,ALL,"_indices"{}.y,FLATTEN_AGGREGATE,NO)         @Coordinate(z,ALL,"_indices"{}.z,FLATTEN_AGGREGATE,NO)         @Dimension(2)    OUTPUT FAILED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_OUTPUT"         @Coordinate(x,ALL,"_indices"{}.x,FLATTEN_AGGREGATE,YES)         @Coordinate(y,ALL,"_indices"{}.y,FLATTEN_AGGREGATE,NO)         @Coordinate(z,ALL,"_indices"{}.z,FLATTEN_AGGREGATE,NO)
+FACTORY_DEF * TestFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC    INPUT FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_INPUT    TEST "<Unused>" TYPE INT ENCODED    OUTPUT PASSED FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_2D_3D_INPUT
+FACTORY_DEF * TestFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_2D_3D    INPUT FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_2D_3D_INPUT    TEST @Dimension() == 2    OUTPUT PASSED FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_2D_INPUT    OUTPUT FAILED FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_3D_INPUT
+FACTORY_DEF * ExecuteFunctionFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_2D    INPUT FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_2D_INPUT    FUNCTION_DEFINITION @Concatenate(          )       OUTPUT COMPLETE FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_OUTPUT"          $($(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SUPPLY_Z)
+FACTORY_DEF * ExecuteFunctionFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_3D    INPUT FEATURE_TYPE $(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_SPECIFIC_3D_INPUT    FUNCTION_DEFINITION @Concatenate(       )    OUTPUT COMPLETE FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_OUTPUT"
+# -------------------------------------------------------------------------
+FACTORY_DEF * VertexCreatorFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_VertexCreator    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CoordinateExtractor_OUTPUT"    MODE ADD    INDEX "<Unused>"    CONTINUE_ON_ERROR YES    XVAL "@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>_indices<opencurly>0<closecurly>.x<closeparen>,$(USCensusCaller_WORKSPACE_NAME)_VertexCreator)"    YVAL "@EvaluateExpression(FDIV,FLOAT,<at>Value<openparen>_indices<opencurly>0<closecurly>.y<closeparen>,$(USCensusCaller_WORKSPACE_NAME)_VertexCreator)"    ZVAL ""    USE_EXISTING_Z YES    MISSING_VAL_MODE REMOVE_NANS    COMPUTE_MEASURES_MODE CONTINUOUS    OUTPUT OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_VertexCreator_OUTPUT"
+# -------------------------------------------------------------------------
+# Deletes the coordinate system off the feature, if present.
+Tcl2 proc $(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_CoordSysRemover {} {    global FME_CoordSys;    set FME_CoordSys {}; }
+MACRO $(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_REMOVE_CS
+MACRO $(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_TRANSFORMATION
+# Only pass on transformation if a source coordinate system was picked
+INCLUDE [    if { {} != {} } {       puts {MACRO $(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_REMOVE_CS @Tcl2($(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_CoordSysRemover)};       puts {MACRO $(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_TRANSFORMATION "<Unused>"};    }; ]
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_VertexCreator_OUTPUT"    OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_REPROJECTED"         $($(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_REMOVE_CS)         @Reproject(FME,"","EPSG:3857",2D,"<Unused>",$($(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_TRANSFORMATION),--,NearestNeighbor,PreserveCells,RASTER_TOLERANCE,0.0)
+# -------------------------------------------------------------------------
+Tcl2 set {$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_coordDelim} [FME_DecodeText {|}];
+Tcl2 set {$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_elementDelim} [FME_DecodeText {<comma>}];
+Tcl2 proc $(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_coord_list {DIM} {     global {$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_coordDelim};     global {$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_elementDelim};     set numCoords [FME_Coordinates numCoords];     set output {};     set includeX [string first {X} {Y X} ];     set includeY [string first {Y} {Y X} ];     set includeZ [string first {Z} {Y X} ];     if { $includeX == -1 && $includeY == -1 && $includeZ == -1 } {       FME_SetAttribute _coordinates $output;       return;     };     for {set i 0} {$i < $numCoords} {incr i} {         if {$includeX != -1} {          append output [FME_Coordinates getCoord x $i];         };         if {$includeY != -1} {             if {$includeX != -1} {                append output [set {$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_elementDelim}] [FME_Coordinates getCoord y $i];             } else {                append output [FME_Coordinates getCoord y $i];             };         };         if { $DIM == 3 && $includeZ != -1 } {             if { $includeX != -1 || $includeY != -1 } {                append output [set {$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_elementDelim}] [FME_Coordinates getCoord z $i];             } else {                append output [FME_Coordinates getCoord z $i];             };         };         if {$i < ($numCoords - 1)} {           append output [set {$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_coordDelim}]         };     };     FME_SetAttribute _coordinates $output; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CsmapReprojector_REPROJECTED"    OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_OUTPUT"         @Tcl2("$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_coord_list @Dimension()")
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_AttributeCreator    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_CoordinateConcatenator_OUTPUT"    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "url" "SET_TO" "https:<solidus><solidus>tigerweb.geo.census.gov<solidus>arcgis<solidus>rest<solidus>services<solidus>Generalized_ACS2016<solidus>Tracts_Blocks<solidus>MapServer<solidus>4<solidus>query?where=1%3D1<amp>geometry=<at>Value<openparen>_coordinates<closeparen><amp>geometryType=esriGeometryPoint<amp>inSR=esriSpatialRelIntersects<amp>outFields=*<amp>returnGeometry=true<amp>returnTrueCurves=false<amp>returnIdsOnly=false<amp>returnCountOnly=false<amp>returnZ=false<amp>returnM=false<amp>returnDistinctValues=false<amp>f=geojson" }    OUTPUT OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeCreator_OUTPUT"
+# -------------------------------------------------------------------------
+MACRO $(USCensusCaller_WORKSPACE_NAME)_FeatureReader_OUTPUT_PORTS_ENCODED 
+MACRO $(USCensusCaller_WORKSPACE_NAME)_FeatureReader_DIRECTIVES USE_BASENAME_AS_DEFAULT_FEATURE_TYPE,Yes,FLATTEN_MODE,ALL_LEVELS,USE_SEARCH_ENVELOPE,NO
+# Always provide an INTERACTION, otherwise the factory defaults to ENVELOPE_INTERSECTS
+INCLUDE [if { ( {NONE} == {<Unused>} ) || ( {($INTERACT_OPTIONS)} == {} ) } {             puts {MACRO FCTQUERY_INTERACTION_LINE FCTQUERY_INTERACTION NONE};          } else {             puts {MACRO FCTQUERY_INTERACTION_LINE FCTQUERY_INTERACTION "NONE"};          }         ]
+# Consolidate the attribute merge options to what the factory expects
+DEFAULT_MACRO $(USCensusCaller_WORKSPACE_NAME)_FeatureReader_COMBINE_ATTRS
+INCLUDE [       if { {RESULT_ONLY} == {MERGE} } {          puts "MACRO $(USCensusCaller_WORKSPACE_NAME)_FeatureReader_COMBINE_ATTRS <Unused>";       } else {          puts "MACRO $(USCensusCaller_WORKSPACE_NAME)_FeatureReader_COMBINE_ATTRS RESULT_ONLY";       };    ]
+INCLUDE [    puts {DEFAULT_MACRO FeatureReaderDataset_$(USCensusCaller_WORKSPACE_NAME)_FeatureReader @EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>url<closeparen>,$(USCensusCaller_WORKSPACE_NAME)_FeatureReader)}; ]
+FACTORY_DEF * QueryFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_FeatureReader    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeCreator_OUTPUT"    $(FCTQUERY_INTERACTION_LINE)    COMBINE_ATTRIBUTES  $($(USCensusCaller_WORKSPACE_NAME)_FeatureReader_COMBINE_ATTRS)    QUERYFCT_ATTRIBUTE_PREFIX <Unused>    COMBINE_GEOMETRY    RESULT_ONLY    ENABLE_CACHE        NO    QUERYFCT_TABLE_SEPARATOR SPACE    READER_TYPE         GEOJSON    READER_DATASET      "$(FeatureReaderDataset_$(USCensusCaller_WORKSPACE_NAME)_FeatureReader)"    QUERYFCT_IDS        ""    READER_DIRECTIVES META_MACROS,SourceFLATTEN_MODE<comma>ALL_LEVELS<comma>SourceEXPOSE_ATTRS_GROUP<comma><comma>SourceGEOJSON_EXPOSE_FORMAT_ATTRS<comma><comma>SourceUSE_BASENAME_AS_DEFAULT_FEATURE_TYPE<comma>Yes<comma>SourceUSE_SEARCH_ENVELOPE<comma>NO<comma>SourceSEARCH_ENVELOPE_MINX<comma>0<comma>SourceSEARCH_ENVELOPE_MINY<comma>0<comma>SourceSEARCH_ENVELOPE_MAXX<comma>0<comma>SourceSEARCH_ENVELOPE_MAXY<comma>0<comma>SourceSEARCH_ENVELOPE_COORDINATE_SYSTEM<comma><comma>SourceCLIP_TO_ENVELOPE<comma>NO,METAFILE,GEOJSON    QUERYFCT_OUTPUT     "BASED_ON_CONNECTIONS"    CONTINUE_ON_READER_ERROR YES    QUERYFCT_RESULT_TAGS $($(USCensusCaller_WORKSPACE_NAME)_FeatureReader_OUTPUT_PORTS_ENCODED)    QUERYFCT_SET_FME_FEATURE_TYPE YES    READER_PARAMS_WWJD     $($(USCensusCaller_WORKSPACE_NAME)_FeatureReader_DIRECTIVES)    TREAT_READER_PARAM_AMPERSANDS_AS_LITERALS YES    OUTPUT RESULT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_FeatureReader_<OTHER>"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} PolygonDissolveFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_Dissolver    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_FeatureReader_<OTHER>"    GROUP_BY { BLKGRP TRACT }    FLUSH_WHEN_GROUPS_CHANGE No    DEAGGREGATE_INPUT Yes    MODE COMPLETE    NON_OVERLAPPING_INPUT No    PROPERLY_NODED_INPUT No    CONNECT_Z_MODE FIRST_WINS    CLEANING_TOLERANCE NONE    ACCUM_INPUT_ATTRS One    LIST_ATTRS_TO_INCLUDE { <Unused> }    LIST_ATTRS_TO_INCLUDE_MODE <Unused>    OUTPUT_REMNANTS    OUTPUT POLYGON FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_Dissolver_AREA"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_AttributeCreator_2    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_Dissolver_AREA"    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "url2" "SET_TO" "https:<solidus><solidus>api.census.gov<solidus>data<solidus>2016<solidus>pdb<solidus>blockgroup?get=County_name<comma>State_name<comma>LAND_AREA<comma>Block_Group<comma>Tot_Population_ACS_10_14<comma>Males_ACS_10_14<comma>Females_ACS_10_14<comma>Pop_65plus_ACS_10_14<comma>Pop_under_5_ACS_10_14<comma>Pop_5_17_ACS_10_14<comma>Pop_18_24_ACS_10_14<comma>Pop_25_44_ACS_10_14<comma>Pop_45_64_ACS_10_14<comma>Pop_65plus_ACS_10_14<comma>NH_White_alone_ACS_10_14<comma>NH_Blk_alone_ACS_10_14<comma>NH_AIAN_alone_ACS_10_14<comma>NH_Asian_alone_ACS_10_14<comma>NH_NHOPI_alone_ACS_10_14<comma>NH_SOR_alone_ACS_10_14<comma>Hispanic_ACS_10_14<comma>Tot_Housing_Units_ACS_10_14<comma>Tot_Vacant_Units_ACS_10_14<comma>Owner_Occp_HU_ACS_10_14<comma>Renter_Occp_HU_ACS_10_14<comma>Tot_Vacant_Units_ACS_10_14<comma>avg_Tot_Prns_in_HHD_ACS_10_14<comma>Med_HHD_Inc_BG_ACS_10_14<comma>Prs_Blw_Pov_Lev_ACS_10_14<comma>Med_House_Value_BG_ACS_10_14<comma>Not_HS_Grad_ACS_10_14<comma>College_ACS_10_14<comma>No_Health_Ins_ACS_10_14<amp>for=block+group:<at>Value<openparen>BLKGRP<closeparen><amp>in=state:<at>Value<openparen>STATE<closeparen><amp>in=county:<at>Value<openparen>COUNTY<closeparen><amp>in=tract:<at>Value<openparen>TRACT<closeparen><amp>key=$($(USCensusCaller_WORKSPACE_NAME)_APIkey$encode)" }    OUTPUT OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT"
+# -------------------------------------------------------------------------
+FACTORY_DEF * HTTPFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_HTTPCaller_2       INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeCreator_2_OUTPUT"    TARGET_URL "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>url2<closeparen>,$(USCensusCaller_WORKSPACE_NAME)_HTTPCaller_2)"    HTTP_METHOD GET    SAVE_FILE NO    OUTPUT_FILENAME "<Unused>"    OUTPUT_DIRECTORY "<Unused>"    FILE_EXTENSION "<Unused>"    TARGET_ATTR "_response_body"    FILE_PATH_ATTR "<Unused>"    UPLOAD_FILE "<Unused>"    UPLOAD_BODY "<Unused>"    MULTIPART_UPLOAD <Unused>    UPLOAD_CONTENT_TYPE "<Unused>"    COMBINED_MULTIPART_TABLE    REQUEST_HEADER_TABLE    ADDITIONAL_URL_PARAMETERS    AUTH_USERNAME "<Unused>"    AUTH_PASSWORD "<Unused>"    AUTH_METHOD "<Unused>"    TARGET_ATTRIBUTE_ENCODING auto-detect    RESPONSE_HEADER_LIST_ATTR "_headers"    STATUS_CODE_ATTR "_http_status_code"    ERROR_ATTR "_error"    CONNECTION_TIMEOUT_LENGTH 60    TRANSFER_TIMEOUT_LENGTH 90    FOLLOW_REDIRECTS Yes    VERIFY_SSL_CERTIFICATES Yes    NAMED_CONNECTION "<Unused>"    USE_COOKIES No    OUTPUT OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_HTTPCaller_2_Output"    OUTPUT REJECTED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_HTTPCaller_2_<REJECTED>"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(USCensusCaller_WORKSPACE_NAME)_HTTPCaller_2 <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_HTTPCaller_2_<REJECTED>"
+# -------------------------------------------------------------------------
+Tcl2 proc $(USCensusCaller_WORKSPACE_NAME)_StringConcatenator_evaluator {} {    if {{OUTGOING} == {OUTGOING}} {      set attr [FME_DecodeText {GEOID}];      if {[string length $attr] == 0} { return; };      set attrs [list [FME_EncodeText $attr]];    } else {      set attrAll {<Unused>};      if {[string length $attrAll] == 0} { return; };      set attrs [split {<Unused>} { }];    };    set parmList {{EvaluateExpression} {ATTR_CREATE_EXPR_PROPOGATE_MISSING_FDIV}};    foreach attr $attrs {     lappend parmList $attr;     lappend parmList {"<at>Value<openparen>STATE<closeparen><at>Value<openparen>COUNTY<closeparen><at>Value<openparen>TRACT<closeparen><at>Value<openparen>BLKGRP<closeparen>"};    };    lappend parmList {$(USCensusCaller_WORKSPACE_NAME)_StringConcatenator};    eval FME_Execute $parmList; }
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_StringConcatenator    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_HTTPCaller_2_Output"    OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_StringConcatenator_OUTPUT"         @Tcl2("$(USCensusCaller_WORKSPACE_NAME)_StringConcatenator_evaluator ")
+# -------------------------------------------------------------------------
+FACTORY_DEF * JSONQueryFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_JSONExtractor    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_StringConcatenator_OUTPUT"    MODE EXTRACT    JSON_DOCUMENT "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>_response_body<closeparen>,$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor)"    READ_FROM_FILE NO    FILEPATH_OR_URL <Unused>    QUERIES attrnames json<openbracket>0<closebracket> attrvalues json<openbracket>1<closebracket>    OUTPUT EVALUATED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_EVALUATED"    OUTPUT REJECTED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_<REJECTED>"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_<REJECTED>"
+# -------------------------------------------------------------------------
+FACTORY_DEF * JSONQueryFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_JSONFragmenter_4    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_EVALUATED"    MODE EXPLODE    EXPLODE_FORMAT JSON    REJECT_EMPTY_LISTS YES    EXTRACT_ATTR Yes    PREF_STRING "_attrnames"    JSON_ATTR "attrnames"    READ_FROM_FILE NO    FILEPATH_OR_URL <Unused>    OUTPUT_ATTRIBUTE "<Unused>"    EXPLODE_QUERY "json<openbracket>*<closebracket>"    RECURSIVE_FLATTEN YES    OUTPUT EXPLODED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONFragmenter_4_FRAGMENTS"    OUTPUT REJECTED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONFragmenter_4_<REJECTED>"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(USCensusCaller_WORKSPACE_NAME)_JSONFragmenter_4 <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONFragmenter_4_<REJECTED>"
+# -------------------------------------------------------------------------
+FACTORY_DEF * JSONQueryFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_2    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONFragmenter_4_FRAGMENTS"    MODE EXTRACT    JSON_DOCUMENT "@EvaluateExpression(FDIV,STRING_ENCODED,<at>Value<openparen>attrvalues<closeparen>,$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_2)"    READ_FROM_FILE NO    FILEPATH_OR_URL <Unused>    QUERIES attrvalues json<openbracket><at>Value<openparen>json_index<closeparen><closebracket>    OUTPUT EVALUATED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_2_EVALUATED"    OUTPUT REJECTED FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_2_<REJECTED>"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_2 <REJECTED> Transformer Output Nuker"   INPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_2_<REJECTED>"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_AttributeCreator_9    COMMAND_PARM_EVALUATION SINGLE_PASS    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_JSONExtractor_2_EVALUATED"    MULTI_FEATURE_MODE NO    NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV     ATTR_ACTION { "" "<at>Value<openparen>attrnames<closeparen>" "SET_TO" "<at>Value<openparen>attrvalues<closeparen>" }    OUTPUT OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeCreator_9_OUTPUT"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} PolygonDissolveFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_Dissolver_2    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeCreator_9_OUTPUT"    GROUP_BY { TRACT BLKGRP }    FLUSH_WHEN_GROUPS_CHANGE No    DEAGGREGATE_INPUT Yes    MODE COMPLETE    NON_OVERLAPPING_INPUT No    PROPERLY_NODED_INPUT No    CONNECT_Z_MODE FIRST_WINS    CLEANING_TOLERANCE NONE    ACCUM_INPUT_ATTRS All    LIST_ATTRS_TO_INCLUDE { <Unused> }    LIST_ATTRS_TO_INCLUDE_MODE <Unused>    OUTPUT_REMNANTS    OUTPUT POLYGON FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_Dissolver_2_AREA"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_AttributeManager_2    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_Dissolver_2_AREA"    MULTI_FEATURE_MODE NO     NULL_ATTR_MODE NO_OP     ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV    ACTION_COLUMN 3    DEF_VAL_COLUMN 2    ATTR_ACTION { "attrnames" "attrnames" "" "REMOVE" }      ATTR_ACTION { "attrvalues" "attrvalues" "" "REMOVE" }      ATTR_ACTION { "url2" "url2" "" "REMOVE" }      ATTR_ACTION { "STATE" "STATE" "" "REMOVE" }      ATTR_ACTION { "COUNTY" "COUNTY" "" "REMOVE" }      ATTR_ACTION { "_headers<opencurly><closecurly>.name" "_headers<opencurly><closecurly>.name" "" "REMOVE" }      ATTR_ACTION { "_headers<opencurly><closecurly>.value" "_headers<opencurly><closecurly>.value" "" "REMOVE" }      ATTR_ACTION { "_response_body" "_response_body" "" "REMOVE" }      ATTR_ACTION { "_http_status_code" "_http_status_code" "" "REMOVE" }      ATTR_ACTION { "json_type" "json_type" "" "REMOVE" }      ATTR_ACTION { "json_index" "json_index" "" "REMOVE" }    OUTPUT OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"
+# -------------------------------------------------------------------------
+FACTORY_DEF * TeeFactory    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_AttributeExposer    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeManager_2_OUTPUT"    OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeExposer_OUTPUT"
+# -------------------------------------------------------------------------
+FACTORY_DEF {*} AttrSetFactory    COMMAND_PARM_EVALUATION SINGLE_PASS    FACTORY_NAME $(USCensusCaller_WORKSPACE_NAME)_AttributeRenamer    INPUT  FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeExposer_OUTPUT" 	 ATTRSET_CREATE_DIRECTIVES _PROPAGATE_MISSING_FDIV 	 ATTR_ACTION { "Tot_Population_ACS_10_14" "Total<space>Population" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Females_ACS_10_14" "Females" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Males_ACS_10_14" "Males" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Hispanic_ACS_10_14" "Hispanic" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "NH_NHOPI_alone_ACS_10_14" "Hawaiian" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "NH_White_alone_ACS_10_14" "Caucasian" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "NH_AIAN_alone_ACS_10_14" "Native<space>American" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "NH_Blk_alone_ACS_10_14" "Black<space>or<space>African<space>American" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "NH_Asian_alone_ACS_10_14" "Asian" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "NH_SOR_alone_ACS_10_14" "Other<space>Ethnicity" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Pop_under_5_ACS_10_14" "Under<space>5" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Pop_5_17_ACS_10_14" "5<space>to<space>17" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Pop_18_24_ACS_10_14" "18<space>to<space>24" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Pop_25_44_ACS_10_14" "25<space>to<space>44" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Pop_45_64_ACS_10_14" "45<space>to<space>64" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Pop_65plus_ACS_10_14" "65<space>or<space>Over" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Tot_Housing_Units_ACS_10_14" "Total<space>Housing<space>Units" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Owner_Occp_HU_ACS_10_14" "Owner<space>Occupied" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Renter_Occp_HU_ACS_10_14" "Renter<space>Occupied" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "avg_Tot_Prns_in_HHD_ACS_10_14" "Average<space>Household<space>Occupancy" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Tot_Vacant_Units_ACS_10_14" "Total<space>Vacant<space>Units" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Med_House_Value_BG_ACS_10_14" "Median<space>Home<space>Value" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Med_HHD_Inc_BG_ACS_10_14" "Median<space>Household<space>Income" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Prs_Blw_Pov_Lev_ACS_10_14" "Population<space>Below<space>Poverty<space>Level" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "No_Health_Ins_ACS_10_14" "Population<space>Without<space>Health<space>Insurance" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "Not_HS_Grad_ACS_10_14" "Population<space>Without<space>High<space>School<space>Diploma" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "College_ACS_10_14" "Population<space>With<space>College<space>Credential" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "State_name" "State" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "TRACT" "Census<space>Tract" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "BLKGRP" "Census<space>Block<space>Group" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "GEOID" "GEOID" "RENAME_SET_DEFAULT" "" }      ATTR_ACTION { "LAND_AREA" "Area<space><openparen>sq.<space>mi.<closeparen>" "RENAME_SET_DEFAULT" "" }    OUTPUT OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeRenamer_OUTPUT"
+FACTORY_DEF * TeeFactory   FACTORY_NAME "$(USCensusCaller_WORKSPACE_NAME)_Areas1546886326 Output Collector"   INPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_AttributeRenamer_OUTPUT"   OUTPUT FEATURE_TYPE "$(USCensusCaller_WORKSPACE_NAME)_Areas"
+INCLUDE [puts {MACRO WB_CURRENT_CONTEXT $(WB_OLD_CONTEXT_$(USCensusCaller_WORKSPACE_NAME))}]
+FACTORY_DEF * TeeFactory   FACTORY_NAME "SimpleUSCensusCaller Areas Output Renamer/Nuker"   INPUT FEATURE_TYPE SimpleUSCensusCaller_Areas   OUTPUT FEATURE_TYPE SimpleUSCensusCaller_Areas
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC SimpleUSCensusCaller_Areas TO GEOJSON __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>blockgroups<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+# -------------------------------------------------------------------------
+
+FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
+
+# -------------------------------------------------------------------------
+GEOJSON_1_DEF blockgroups   "Total Population"           int   Females                      int   Males                        int   Hispanic                     int   Hawaiian                     int   Caucasian                    int   "Native American"            int   "Black or African American"  int   Asian                        int   "Other Ethnicity"            int   "Under 5"                    int   "5 to 17"                    int   "18 to 24"                   int   "25 to 44"                   int   "45 to 64"                   int   "65 or Over"                 int   "Total Housing Units"        int   "Owner Occupied"             int   "Renter Occupied"            int   "Average Household Occupancy" float   "Total Vacant Units"         int   "Median Home Value"          string   "Median Household Income"    string   "Population Below Poverty Level" int   "Population Without Health Insurance" int   "Population Without High School Diploma" int   "Population With College Credential" int   State                        string   "Census Tract"               int   "Census Block Group"         int   GEOID                        int   "Area (sq. mi.)"             float

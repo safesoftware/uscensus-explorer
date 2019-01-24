@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- Safe Software, 2018 -->
+		<!-- http://www.safe.com -->
+		<title>Explore US Census Data</title>
+		<!-- JQuery -->
+		<script src="libs/jquery/jquery-3.3.1.min.js"></script>
+		<!-- Bootstrap -->
+		<script src="libs/bootstrap/js/bootstrap.js"></script>
+		<link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<!-- Stylesheet for demo/tutorial -->
+		<link rel="stylesheet" href="css/index.css">
+		<!-- Icons -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+		<link rel="icon" href="/libs/img/favicon.ico" />
+		<!-- The following are Required for Mapbox Integration -->
+		<link href='https://api.tiles.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+		<script src='https://api.tiles.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+		<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.4.10/leaflet.draw.js'></script>
+		<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.4.10/leaflet.draw.css' rel='stylesheet' />
+		<!-- Generic server functions -->
+		<script src="js/FMEServer.js"></script>
+		<!-- Demo-specific JavaScript -->
+		<script src="js/uscensus-explorer.js"></script>
+	</head>
+	<body>
+		<header class="header">
+			<div id="nav-top">
+				<div class="navbar-inner">
+					<div class="container">
+						<a href="http://www.safe.com/">safe.com</a>
+	      				<a href="http://blog.safe.com/">blog</a>
+	      				<a href="https://knowledge.safe.com/" class="text-white">knowledge</a>
+	      			</div>
+	      		</div>
+	      	</div>
+			<div class="navbar navbar-default navbar-static-top">
+				<div class="container">
+					<div class="navbar-header">
+						<div class="navbar-brand"><h1><a href="https://playground.fmeserver.com/demos/" class='text-white'>FME Server Demos</a><span class="hidden-tiny"> | US Census Explorer</span></h1>
+						</div>
+					</div>
+					<ul class="nav justify-content-end">
+        				<li class="nav-item dropdown">
+        					<div class="container" id="navbarDropdown">
+        						<a class="btn btn-light nav-link dropdown-toggle" role="button" data-toggle=
+        						"dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+        						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          							<a class="dropdown-item" href="#">
+          								<i class="fas fa-book-open"></i>
+          									How-To Article</a>
+          							<a class="dropdown-item" href="#">
+          								<i class="fas fa-code-branch"></i>
+          									Fork GitHub</a>
+          							<a class="dropdown-item" href="#">
+          								<i class="fas fa-download"></i>
+          									Download Zip</a>
+          						</div>
+          					</div>
+          				</li>
+      				</ul>
+      			</div>
+      		</div>
+    	</header>
+    	<main>
+	    	<div class="content bg-img">
+	    		<div class="title">
+		    		<h2 class="text-white">Leveraging the US Census API</h2>
+		    	</div>
+		    	<div class='align-items-center'>
+		    		<div class='card-group width-60'>
+		    			<div class='card'>
+		    				<a href= "https://www.census.gov/data/developers/data-sets/planning-database.html" target= "_blank"><img class='card-img-top' src="https://images.safe.com/icons/svg/big-data.svg" alt="Database"></a>
+		    				<div class='card-body'>
+		    					<h4 class='card-title'>Planning Database</h4>
+								<p class="card-text">
+								This demo provides US Census demographic data from the <a href= "https://www.census.gov/data/developers/data-sets/planning-database.html" target= "_blank">2016 Planning Database</a>, which combines subsets of demographic and economic variables from the decennial census and the 5-year community survey at the tract and blockgroup geographies.
+								</p>
+							</div>
+						</div>
+						<div class='card'>
+		    				<a href = 'https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html' target= "_blank"><img class='card-img-top' src="https://images.safe.com/icons/svg/web-services.svg" alt="Web Services"></a>
+		    				<div class='card-body'>
+		    					<h4 class='card-title'>TIGERweb REST Services</h4>
+								<p class="card-text">
+								Markers placed on the map will be used to query US Census spatial data from the <a href = 'https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_restmapservice.html' target= "_blank">TIGERweb GeoServices</a>. The geography level returned is the Census Blockgroup.
+								</p>
+							</div>
+						</div>
+						<div class='card'>
+		    				<a href="https://hub.safe.com/?page=1&page_size=10&order=relevance&query=uscensuscaller" target= "_blank"><img class='card-img-top' src="https://images.safe.com/icons/svg/connect.svg" alt="API Integration"></a>
+		    				<div class='card-body'>
+		    					<h4 class='card-title'>FME Server</h4>
+								<p class="card-text">
+								Behind the scenes, FME Server runs a workspace that uses logic inside the <a href="https://hub.safe.com/?page=1&page_size=10&order=relevance&query=uscensuscaller" target= "_blank">USCensusCaller</a> to query the Planning Database API and join it with TIGERweb spatial fetaures. FME Server's Data Streaming Service streams the data to the map, and the Data Download Service allows you to download the results.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card width-80 scroll" id="explore">
+					<div id='mapPage'>
+						<div class="container">
+							<div class="map-title">
+								<h3><strong>Explorer</strong></h3>
+							</div>
+						<div class="row">
+						<div class="col-5">
+							<img class='map-img' src="https://images.safe.com/icons/svg/gis.svg" alt="Interactive Map">
+						</div>
+						<div class="col-7">
+							<p class="card-text explorer-text">
+								Place markers on the map to fetch data.<br> 
+								Hover over areas to display data table. <br>
+								Click the Download Data button to download the entire fetched dataset.
+							</p>
+						</div>
+					</div>
+					</div>
+						<div id="mapDiv" class="map card width-80">
+							<button id="fetch-btn" class='btn btn-secondary btn-orange btn-sm overtop width-20' onClick='uscensus.fetchData()'>
+								<i id="fa-server" class="fas fa-server"></i><i id="fa-spinner" class="fas fa-spinner fa-spin"></i>
+								<span class="hidden-tiny">Fetch Data</span>
+							</button>
+							<button id="reset-btn" class='btn btn-secondary btn-sm overtop width-20' onClick='uscensus.resetMap()'>
+								<i class="fas fa-undo-alt"></i>
+									<span class="hidden-tiny">Reset</span>
+							</button>
+						</div>
+						<table id='table' class='ui-control table-hover table-striped table-sm col-8 table-bordered'>
+							<thead>
+								<th scope="col">Variable</th>
+								<th scope="col">Value</th>
+								<th scope="col">Variable</th>
+								<th scope="col">Value</th>
+							</thead>
+							<tbody id="tbody"></tbody>
+						</table>
+						<div>
+							<button id="download-btn" class='btn btn-secondary btn-orange btn-sm width-20' onClick='uscensus.dataDownload()'>
+								<i class="fas fa-file-download"></i>
+								<span class="hidden-tiny">Download Data</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+    	<footer class="footer">
+      		<div class="container">
+        		<p class="text-muted">Powered by <a href="https://www.safe.com/fme/fme-server/" class="link-orange">FME. <img src="./libs/img/fme.png" class="fme" alt="FME"></a>
+        		</p>
+      		</div>
+    	</footer>
+	</body>
+</html>
